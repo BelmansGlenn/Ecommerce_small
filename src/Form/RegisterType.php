@@ -11,6 +11,9 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Regex;
 
 class RegisterType extends AbstractType
 {
@@ -19,18 +22,39 @@ class RegisterType extends AbstractType
         $builder
             ->add('firstname', TextType::class, [
                 'label' => 'Votre prénom',
+                'constraints' => [
+                    new Length([
+                        'min' => 3,
+                        'max' => 20
+                    ]),
+                    new NotBlank()
+                ],
                 'attr' => [
                     'placeholder' => 'Saisissez votre prénom'
                 ]
                 ])
             ->add('lastname', TextType::class, [
                 'label' => 'Votre nom',
+                'constraints' => [
+                    new Length([
+                        'min' => 3,
+                        'max' => 30
+                    ]),
+                    new NotBlank()
+                ],
                 'attr' => [
                     'placeholder' => 'Saisissez votre nom de famille'
                 ]
             ])
             ->add('email', EmailType::class, [
                 'label' => 'Votre email',
+                'constraints' => [
+                    new Length([
+                        'min' => 3,
+                        'max' => 60
+                    ]),
+                    new NotBlank()
+                ],
                 'attr' => [
                     'placeholder' => 'Saisissez votre adresse email'
                 ]
@@ -41,13 +65,24 @@ class RegisterType extends AbstractType
                 'required' => true,
                 'first_options' => [
                     'label' => 'Votre mot de passe',
+                    'attr' => [
+                        'placeholder' => 'Saisissez votre mot de passe'
+                    ]
                 ],
                 'second_options' => [
-                    'label' => 'Confirmez votre mot de passe'
+                    'label' => 'Confirmez votre mot de passe',
+                    'attr' => [
+                        'placeholder' => 'Saisissez votre mot de passe'
+                    ]
                 ],
-                'attr' => [
-                    'placeholder' => 'Saisissez votre mot de passe'
-                ]
+                'constraints' => [
+                    new Regex([
+                        'pattern' => '/^(?=.*\d)(?=.*[A-Z])(?=.*[@#$%])(?!.*(.)\1{2}).*[a-z]/m',
+                        'message' => "Votre mot de passe doit comporter au moins huit caractères, dont des lettres majuscules et minuscules, un chiffre et un symbole."
+                    ]),
+                    new NotBlank()
+                ],
+
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'S\'inscrire'
