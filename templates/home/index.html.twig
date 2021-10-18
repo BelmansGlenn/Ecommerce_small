@@ -3,18 +3,42 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Applications/MAMP/htdocs/Ecommerce_small/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Applications/MAMP/htdocs/Ecommerce_small/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+<section class= "hPromoBox">
+    <div class="promoAnim">Les soldes d'hivers sont là!</div>
+    <div class="hPromo">
+        <h2>Profitez de 20% sur nos soldes spécial fin d'année.</h2>
+        <a href="/inscription">SHOP NOW</a>
+    </div>
+</section>
+<section class="showBoxHome spaceShowB">
+    <h1>Collections</h1>
+    <div class="boxHome">
+        <div class="boxHomeL">
+            <figure><img src="/assets/img/home.jpg"></figure>
+            <section>
+                <h2>meubles</h2>
+                <a href="/shop">shop now</a>
+            </section>
+        </div>        
+        <div class="boxHomeR">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </div>
+</section>
+<section class="showBoxHome">
+    <h1>Eclairage</h1>
+    <div class="boxHome">
+        <div class="boxHomeL">
+            <figure><img src="/assets/img/lightSalon.jpg"></figure>
+            <section>
+                <h2>Salon</h2>
+                <a href="/inscription">shop now</a>
+            </section>
+        </div>        
+        <div class="boxHomeR">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </div>
+</section>
+<script src="/assets/js/home.js"></script>
 {% endblock %}

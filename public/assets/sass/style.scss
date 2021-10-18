@@ -1,0 +1,184 @@
+.displayNo {
+    display: none;
+}
+//   VARIABLES 
+// Colors 
+$gris: #707070;
+$w: #ffffff;
+$b: #000000;
+$promo: #C0EED7;
+$purp: #93A5EF;
+$fluo: #D3FBE3;
+// Twig base start
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: #F6F6F6;
+} 
+.headerB {
+    padding: 10px 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.logoHead {
+    font-family: tuppence, serif;
+    font-size: 33px;
+    color: $gris;
+    margin-bottom: 6px;
+}
+.accHead {
+    letter-spacing: 14px;
+}
+.icHead {
+    font-size: 20px;
+}
+// Twig base end 
+// Home start 
+.hPromoBox {
+    background-color: #0B182D;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.circlePromo {
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.hPromo {
+    background-color: $w;
+    width: 300px;
+    height: 200px;
+    transform: translate(0px, 150%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 25px;
+}
+.hPromo h2 {
+    font-family: quiche-sans, sans-serif;
+    font-size: 27px
+}
+.hPromo a {
+    font-family: agenda, sans-serif;
+    font-size: 22px;
+    color: $b;
+    border: 1px dotted black;
+    text-align: center;
+    padding: 10px 0px;
+    width: 210px;
+    margin: auto;
+    margin-top: 15px;
+}
+.spaceShowB {
+    margin-top: 135px;
+}
+.showBoxHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.showBoxHome h1 {
+    font-family: kudryashev-d-contrast, sans-serif;
+    font-size: 43px;
+    transform: translate(-38px, 5%);
+    margin-bottom: 15px;
+}
+.showBoxHome h2 {
+    font-family: arponasans, sans-serif;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+.showBoxHome figure {
+    height: 300px;
+    width: 265px;
+    // display: flex;
+    background-color: bisque;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+}
+.boxHome {
+    display: flex;
+}
+.boxHome section {
+    background-color: $w;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 55px -35pw;
+    padding: 12px;
+
+}
+.boxHome a {
+    font-family: agenda, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.boxHomeR {
+    transform: translate(17px, 45%);
+}
+// Home end 
+// Shop start
+.shopNav {
+    display: flex;
+    flex-direction: column;
+}
+.shopNav h1 {
+    font-family: kudryashev-d-contrast, sans-serif;
+    font-size: 43px;
+    text-align: center;
+    margin-top: 20px;
+}
+.shopNav div {
+    display: flex;
+    justify-content: space-evenly;
+}
+.shopNav button {
+    font-family: arponasans, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    padding: 9px 20px;
+    background-color: $w;
+}
+#filterList {
+    display: none;
+}
+.shopNav ul {
+    margin-top: 20px;
+    border-top: 1px solid black;
+}
+.shopNav li {
+    font-family: agenda, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    text-align: center;
+    list-style: none;
+    padding: 9px 20px;
+}
+#sortList {
+    display: none;
+}
+// Shop end

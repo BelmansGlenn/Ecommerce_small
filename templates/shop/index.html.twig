@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<section class="shopNav">
+    <h1>Notre collection</h1>
+    <div>
+        <button id="filterBtn">filtrer</button>
+        <button id="sortBtn">trier</button>
+        <ol id="sortList">
+            <li>Nouveautés</li>
+            <li>A - Z</li>
+            <li>Z - A</li>
+            <li>Prix croissant</li> 
+            <li>Prix décroissant</li> 
+            <li>Disponible</li> 
+        </ol> 
+    </div>
+    <nav id="filterList">
+        <ul>
+            <li>Lits</li>
+            <li>Bancs</li>
+            <li>Chaises</li>
+            <li>Bureaux</li> 
+            <li>Lampes</li> 
+            <li>Fauteil</li> 
+            <li>Tables</li> 
+            <li>Tabourets</li> 
+            <li>Tapis</li> 
+            <li>Décoration</li> 
+            <li>Curiosités</li> 
+        </ul> 
+    </nav>
+</section>
+
+<script src="/assets/js/shop.js"></script>
+{% endblock %}
