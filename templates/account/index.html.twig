@@ -3,7 +3,9 @@
 {% block title %}Mon compte!{% endblock %}
 
 {% block body %}
-<h1>Mon compte</h1>
- <p>Bienvenue {{ app.user.firstname }} dans votre compte</p>
- <a href="{{ path('app_logout') }}">Deconnexion</a>
+<section class="compteMain">
+    <h1>Mon compte</h1>
+    <p>Bienvenue dans vote espace personnel {{ app.user.firstname }}, ici vous pourrez modifier les informations liées à votre compte.</p>
+    <button><a href="{{ path('app_logout') }}">Deconnexion</a></button>
+</section>
 {% endblock %}

@@ -39,6 +39,13 @@ body {
   letter-spacing: 14px;
 }
 
+.accHead a {
+  letter-spacing: 1px;
+  font-family: agenda, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
 .icHead {
   font-size: 20px;
 }
