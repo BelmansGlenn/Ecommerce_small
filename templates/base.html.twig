@@ -18,6 +18,13 @@
         {% endblock %}
     </head>
     <body>
+
+           {% if app.user %}
+                <a href="{{ path('account') }}">Mon compte</a>
+            {% else %}
+                <a href="{{ path('app_login') }}">Connexion</a>
+            {% endif %}
+
     <header class="headerB">
         <div class="logoHead">Glaira</div>
         <i class="icHead fas fa-bars"></i>
@@ -26,6 +33,7 @@
             <a href="/inscription"><i class="icHead fas fa-shopping-basket"></i></a>
         </section>
     </header>
+
         {% block body %}{% endblock %}
     </body>
 </html>
