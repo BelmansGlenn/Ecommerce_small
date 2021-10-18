@@ -25,8 +25,8 @@
                 <a href="{{ path('app_login') }}">dexonenxion<i class="icHead fas fa-shopping-basket"></i></a>
             {% endif %} #}
     <header class="headerB">
-        <div class="logoHead">Glaira</div>
-        <i class="icHead fas fa-bars"></i>
+        <a href="{{ path('home') }}"><div class="logoHead">Glaira</div></a>
+        <a href="{{ path('shop') }}"><i class="icHead fas fa-bars"></i></a>
         <section class="accHead">
             {% if app.user %}
                 <a href="{{ path('account') }}">Compte</a>

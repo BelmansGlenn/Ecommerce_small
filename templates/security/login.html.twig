@@ -16,9 +16,9 @@
 
     <h1>Veuillez vous connecter</h1> 
     <label for="inputEmail">Votre e-mail</label>
-    <input class="inputFco" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="Votre adresse email" required autofocus>
+    <input class="inputFco" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="exemple@gmail.com" required autofocus>
     <label for="inputPassword">mot de passe</label>
-    <input class="inputFco" type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="Votre mot de passe" required>
+    <input class="inputFco" type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="saisissez votre mot de passe" required>
 
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
