@@ -146,4 +146,53 @@ body {
   transform: translate(17px, 45%);
 }
 
+.shopNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.shopNav h1 {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 43px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.shopNav div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.shopNav button {
+  font-family: arponasans, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 9px 20px;
+  background-color: #ffffff;
+}
+
+#filterList {
+  display: none;
+}
+
+.shopNav ul {
+  margin-top: 20px;
+  border-top: 1px solid black;
+}
+
+.shopNav li {
+  font-family: agenda, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  text-align: center;
+  list-style: none;
+  padding: 9px 20px;
+}
+
+#sortList {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
