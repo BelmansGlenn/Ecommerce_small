@@ -14,6 +14,13 @@
         {% endblock %}
     </head>
     <body>
+        {% block header %}
+           {% if app.user %}
+                <a href="{{ path('account') }}">Mon compte</a>
+            {% else %}
+                <a href="{{ path('app_login') }}">Connexion</a>
+            {% endif %}
+        {% endblock%}
         {% block body %}{% endblock %}
     </body>
 </html>
