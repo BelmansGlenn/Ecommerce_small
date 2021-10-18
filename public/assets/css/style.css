@@ -169,6 +169,7 @@ body {
   text-transform: uppercase;
   border: 1px solid black;
   padding: 9px 20px;
+  background-color: #ffffff;
 }
 
 #filterList {
