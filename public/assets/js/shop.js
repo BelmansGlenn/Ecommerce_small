@@ -9,11 +9,6 @@ function filterShop() {
         filterList.style.display = "block"
         sortList.style.display = "none"
     })
-    // window.addEventListener('click', (event) => {
-    //     if(event.target != menuBouton && menu.classList.contains('disBlock')){
-    //       menu.classList.remove('disBlock')
-    //     }
-    // })
 }
 filterShop()
 function sortShop() {
@@ -21,10 +16,27 @@ function sortShop() {
         filterList.style.display = "none"
         sortList.style.display = "block"
     })
-    // window.addEventListener('click', (event) => {
-    //     if(event.target != menuBouton && menu.classList.contains('disBlock')){
-    //       menu.classList.remove('disBlock')
-    //     }
-    // })
 }
 sortShop()
+
+// xxxxxx---> FOR FUN <------xxxx
+function displayShop() {
+    let shopMain = document.querySelector(".shopMain")
+    for (let i = 1; i < 61; i++) {
+        let product = `    <div>
+        <figure><img src="/assets/img/products/chaises${i}.jpg"></figure>
+        <h1>Chaise</h1>
+        <section class="buyBox">
+            <h2>Vamesa<h2>
+            <div>
+                <p>299€</p>
+                <p>buy</p>
+            </div>
+        </section>
+    </div>`
+        shopMain.insertAdjacentHTML("beforeend", product)
+        i++;
+
+    }
+}
+displayShop()
