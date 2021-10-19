@@ -1,4 +1,4 @@
-// shop filters 
+// products filters
 const filterBtn = document.querySelector("#filterBtn")
 const sortBtn = document.querySelector("#sortBtn")
 const filterList = document.querySelector("#filterList")
