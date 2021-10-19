@@ -136,3 +136,33 @@
     margin: auto;
     border: 1px dotted variables.$b;
 }
+// Reset mot de passe 
+.changeMdpForm h1 {
+    font-family: kudryashev-d-contrast, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.changeMdpForm p {
+    font-family: agenda, sans-serif;
+    font-size: 14px;
+    margin: 20px 43px;
+}
+.changeMdpForm form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.changeMdpForm input {
+    background-color: black;
+    width: 225px;
+    height: 55px;
+    border: none;
+    color: #ffffff;
+    font-family: agenda, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    text-align: center;
+}

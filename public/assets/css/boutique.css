@@ -1,3 +1,108 @@
+.shopNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.shopNav h1 {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 43px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.shopNav div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.shopNav button {
+  font-family: arponasans, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 9px 20px;
+  background-color: #ffffff;
+}
+
+#filterList {
+  display: none;
+}
+
+#string {
+  border: none;
+  border-bottom: 1px Solid black;
+  text-align: center;
+  background: none;
+  padding-bottom: 5px;
+  margin: 20px 0px 3px 0px;
+  font-family: arponasans, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  width: 180px;
+}
+
+#categories {
+  display: block;
+}
+
+#categories label {
+  margin: 10px 15px;
+}
+
+#submit {
+  margin: 20px 0px;
+}
+
+.paddFilter {
+  padding: 30px 40px;
+  border-bottom: 1px dotted black;
+}
+
+.shopNav ul {
+  margin-top: 20px;
+  border-top: 1px solid black;
+}
+
+.shopNavLiHack li {
+  font-family: agenda, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  text-align: center;
+  list-style: none;
+  padding: 9px 20px;
+}
+
+#filterList li {
+  font-family: agenda, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  list-style: none;
+  padding: 9px 20px;
+  background-color: aquamarine;
+}
+
+.paddFilter {
+  padding: 30px 40px;
+}
+
+.filterDiv {
+  display: flex;
+}
+
+#sortList {
+  display: none;
+}
+
+#filterBtnCheck {
+  font-size: 11px;
+  padding: 6px 9px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  border: 1px dotted;
+  background: none;
+}
+
 .shopMain {
   width: 325px;
   display: flex;
