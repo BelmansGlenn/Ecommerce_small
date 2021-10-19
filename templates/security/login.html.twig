@@ -3,7 +3,7 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<form method="post">
+<form class="formCo" method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -14,15 +14,26 @@
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Merci de vous connecter</h1>
-    <label for="inputEmail">Votre email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="Votre adresse email" required autofocus>
-    <label for="inputPassword">Votre mot de passe</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="Votre mot de passe" required>
+    <h1>Veuillez vous connecter</h1> 
+    <label for="inputEmail">Votre e-mail</label>
+    <input class="inputFco" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="exemple@gmail.com" required autofocus>
+    <label for="inputPassword">mot de passe</label>
+    <input class="inputFco" type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="saisissez votre mot de passe" required>
 
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
     >
+    <button type="submit">
+        <i class="fas fa-long-arrow-alt-right"></i>
+    </button>
+</form>
+<button class="insCo">
+    <a href="{{ path("register") }}">S'inscrire</a>
+</button>
+{% endblock %}
+
+
+
 
     {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
@@ -34,10 +45,3 @@
             </label>
         </div>
     #}
-
-    <button class="btn btn-lg btn-primary" type="submit">
-        Se connecter
-    </button>
-</form>
-    <a href="{{ path("register") }}">S'inscrire</a>
-{% endblock %}

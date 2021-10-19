@@ -1,0 +1,148 @@
+.formCo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formCo h1 {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.formCo label {
+  color: #000000;
+  font-family: arponasans, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.inputFco {
+  background-color: black;
+  width: 225px;
+  height: 55px;
+  border: none;
+  color: #ffffff;
+  font-family: agenda, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  text-align: center;
+}
+
+.formCo button {
+  background-color: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  font-size: 22px;
+  margin: 24px 0px;
+}
+
+.insCo {
+  background-color: #C4DBFF;
+  width: 142px;
+  height: 43px;
+  color: #000000;
+  font-family: arponasans, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  text-align: center;
+  display: block;
+  margin: auto;
+  border: 1px dotted #000000;
+  margin-top: 30px;
+}
+
+.insForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.insForm input {
+  background-color: #C4DBFF;
+  width: 225px;
+  height: 55px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  background-color: #000000;
+  color: white;
+  font-family: agenda, sans-serif;
+  margin: 9px 0px;
+}
+
+.insForm h1 {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.insForm li {
+  font-family: agenda, sans-serif;
+  font-size: 6px;
+  text-align: start;
+  margin: auto;
+  position: absolute;
+  list-style: none;
+  color: #ff9898;
+  text-transform: uppercase;
+}
+
+.insForm button {
+  background-color: #C4DBFF;
+  width: 190px;
+  height: 45px;
+  color: #000000;
+  font-family: arponasans, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  text-align: center;
+  display: block;
+  margin: auto;
+  border: 1px dotted #000000;
+  margin-top: 30px;
+}
+
+.insForm label {
+  display: none;
+}
+
+.compteMain h1 {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.compteMain p {
+  font-family: agenda, sans-serif;
+  font-size: 14px;
+  margin: 20px 43px;
+}
+
+.compteMain button {
+  width: 142px;
+  height: 43px;
+  color: #000000;
+  font-family: arponasans, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  text-align: center;
+  display: block;
+  margin: auto;
+  border: 1px dotted #000000;
+}
+
+/*# sourceMappingURL=log-compte.css.map */

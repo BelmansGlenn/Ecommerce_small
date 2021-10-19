@@ -9,6 +9,8 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="/assets/css/style.css">
             <link rel="stylesheet" href="/assets/css/home.css">
+            <link rel="stylesheet" href="/assets/css/log-compte.css">
+            <link rel="stylesheet" href="/assets/css/boutique.css">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
             <link rel="stylesheet" href="https://use.typekit.net/oel8paj.css">
         {% endblock %}
@@ -18,22 +20,18 @@
         {% endblock %}
     </head>
     <body>
-
-           {% if app.user %}
-                <a href="{{ path('account') }}">Mon compte</a>
+    <header class="headerB">
+        <a href="{{ path('home') }}"><div class="logoHead">Glaira</div></a>
+        <a href="{{ path('shop') }}"><i class="icHead fas fa-bars"></i></a>
+        <section class="accHead">
+            {% if app.user %}
+                <a href="{{ path('account') }}">Compte</a>
             {% else %}
                 <a href="{{ path('app_login') }}">Connexion</a>
             {% endif %}
-
-    <header class="headerB">
-        <div class="logoHead">Glaira</div>
-        <i class="icHead fas fa-bars"></i>
-        <section class="accHead">
-            <a href="/inscription"><i class="icHead far fa-user"></i></a> 
             <a href="/inscription"><i class="icHead fas fa-shopping-basket"></i></a>
         </section>
     </header>
-
         {% block body %}{% endblock %}
     </body>
 </html>
