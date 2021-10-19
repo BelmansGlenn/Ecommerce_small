@@ -1,0 +1,138 @@
+@use 'variables.scss';
+
+.formCo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formCo h1 {
+    font-family: kudryashev-d-contrast, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.formCo label {
+    color: variables.$b;
+    font-family: arponasans, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.inputFco {
+    background-color: rgb(0, 0, 0);
+    width: 225px;
+    height: 55px;
+    border: none;
+    color: variables.$w;
+    font-family: agenda, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    text-align: center;
+}
+.formCo button {
+    background-color:none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid variables.$b;
+    font-size: 22px;
+    margin: 24px 0px;
+}
+.insCo{
+    background-color: variables.$blue;
+    width: 142px;
+    height: 43px;
+    color: variables.$b;
+    font-family: arponasans, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    border: 1px dotted variables.$b;
+    margin-top: 30px;
+}
+
+// Inscription 
+.insForm {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.insForm input {
+    background-color: variables.$blue;
+    width: 225px;
+    height: 55px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    background-color: variables.$b;
+    color: white;
+    font-family: agenda, sans-serif;
+    margin: 9px 0px;
+}
+.insForm h1 {
+    font-family: kudryashev-d-contrast, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.insForm li {
+    font-family: agenda, sans-serif;
+    font-size: 6px;
+    text-align: start;
+    margin: auto;
+    position: absolute;
+    list-style: none;
+    color: #ff9898;
+    text-transform: uppercase;
+}
+.insForm button {
+    background-color: variables.$blue;
+    width: 190px;
+    height: 45px;
+    color: variables.$b;
+    font-family: arponasans, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    border: 1px dotted variables.$b;
+    margin-top: 30px;
+}
+.insForm label {
+    display: none;
+}
+
+// Espace compte 
+.compteMain h1 {
+    font-family: kudryashev-d-contrast, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.compteMain p {
+    font-family: agenda, sans-serif;
+    font-size: 14px;
+    margin: 20px 43px;
+}
+.compteMain button {
+    width: 142px;
+    height: 43px;
+    color: variables.$b;
+    font-family: arponasans, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    border: 1px dotted variables.$b;
+}

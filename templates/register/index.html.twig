@@ -3,10 +3,11 @@
 {% block title %}Hello RegisterController!{% endblock %}
 
 {% block body %}
-    {{ form_start(registerForm) }}
-    {{ form_row(registerForm.firstname) }}
-    {{ form_row(registerForm.lastname) }}
-    {{ form_row(registerForm.email) }}
-    {{ form_row(registerForm.password)}}
+    {{ form_start(registerForm, {'attr':{'class':'insForm'}}) }}
+        <h1>Inscription</h1> 
+        {{ form_row(registerForm.firstname) }}
+        {{ form_row(registerForm.lastname) }}
+        {{ form_row(registerForm.email) }}
+        {{ form_row(registerForm.password)}}
     {{ form_end(registerForm) }}
 {% endblock %}

@@ -30,7 +30,7 @@ class RegisterType extends AbstractType
                     new NotBlank()
                 ],
                 'attr' => [
-                    'placeholder' => 'Saisissez votre prénom'
+                    'placeholder' => 'prénom'
                 ]
                 ])
             ->add('lastname', TextType::class, [
@@ -43,7 +43,7 @@ class RegisterType extends AbstractType
                     new NotBlank()
                 ],
                 'attr' => [
-                    'placeholder' => 'Saisissez votre nom de famille'
+                    'placeholder' => 'nom de famille'
                 ]
             ])
             ->add('email', EmailType::class, [
@@ -56,7 +56,7 @@ class RegisterType extends AbstractType
                     new NotBlank()
                 ],
                 'attr' => [
-                    'placeholder' => 'Saisissez votre adresse email'
+                    'placeholder' => 'adresse email'
                 ]
             ])
             ->add('password', RepeatedType::class, [
@@ -66,13 +66,13 @@ class RegisterType extends AbstractType
                 'first_options' => [
                     'label' => 'Votre mot de passe',
                     'attr' => [
-                        'placeholder' => 'Saisissez votre mot de passe'
+                        'placeholder' => 'mot de passe'
                     ]
                 ],
                 'second_options' => [
                     'label' => 'Confirmez votre mot de passe',
                     'attr' => [
-                        'placeholder' => 'Saisissez votre mot de passe'
+                        'placeholder' => 'confirmer mot de passe'
                     ]
                 ],
                 'constraints' => [
@@ -85,7 +85,7 @@ class RegisterType extends AbstractType
 
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'S\'inscrire'
+                'label' => 'créer mon compte'
             ])
         ;
     }

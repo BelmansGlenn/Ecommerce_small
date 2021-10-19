@@ -39,6 +39,13 @@ body {
   letter-spacing: 14px;
 }
 
+.accHead a {
+  letter-spacing: 1px;
+  font-family: agenda, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
 .icHead {
   font-size: 20px;
 }
@@ -50,6 +57,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 130px;
 }
 
 .circlePromo {
@@ -68,11 +76,13 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 10px 25px;
+  box-shadow: rgba(3, 81, 77, 0.06) 0px 10px 50px;
 }
 
 .hPromo h2 {
   font-family: quiche-sans, sans-serif;
   font-size: 27px;
+  margin-top: 6px;
 }
 
 .hPromo a {
@@ -94,16 +104,13 @@ body {
 .showBoxHome {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
+  margin: 20px 40px;
 }
 
 .showBoxHome h1 {
   font-family: kudryashev-d-contrast, sans-serif;
   font-size: 43px;
-  transform: translate(-38px, 5%);
-  margin-bottom: 15px;
+  margin: 27px 0px;
 }
 
 .showBoxHome h2 {
