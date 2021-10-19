@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block body %}
+
+    <section class="shopMain">
+            <div>
+                <figure><img src="/assets/img/products/{{ product.illustration }}"></figure>
+                <h1>{{ product.name }}</h1>
+                    <h2>{{ product.category }}<h2>
+                            <div>
+                                <p>{{ (product.price /100)|number_format(2, ',', '.')}} €</p>
+                                <p>buy</p>
+                            </div>
+                <div>
+                    <p>{{ product.details }}</p>
+                    <p>{{ product.dimensions }}</p>
+                </div>
+
+            </div>
+
+
+    </section>
+    <script src="/assets/js/shop.js"></script>
+{% endblock %}

@@ -1,11 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Nos Produits - Glayra{% endblock %}
 
 {% block body %}
 
-    {% for product in products %}
-    {% endfor %}
+
+
+
 <section class="shopNav">
     <h1>Notre collection</h1>
     <div>
@@ -22,32 +23,30 @@
     </div>
     <nav id="filterList">
         <ul>
-            <li>Lits</li>
-            <li>Bancs</li>
-            <li>Chaises</li>
-            <li>Bureaux</li> 
-            <li>Lampes</li> 
-            <li>Fauteil</li> 
-            <li>Tables</li> 
-            <li>Tabourets</li> 
-            <li>Tapis</li> 
-            <li>Décoration</li> 
-            <li>Curiosités</li> 
+            {{ form_start(searchForm) }}
+            <li>{{ form_row(searchForm.string) }}</li>
+            <li>{{ form_row(searchForm.categories) }}</li>
+            <li>{{ form_row(searchForm.submit) }}</li>
+            {{ form_end(searchForm) }}
         </ul> 
     </nav>
 </section>
-<section class="shopMain">
-    <div>
-        <figure><img src="/assets/img/products/chaises52.jpg"></figure>
-        <h1>Vamesa</h1>
-        <section class="buyBox">
-            <h2>Chaise<h2>
-            <div>
-                <p>299€</p>
-                <p>buy</p>
-            </div>
-        </section>
-    </div>
+    <section class="shopMain">
+    {% for product in products %}
+        <div>
+            <figure><a href="{{ path('product', {slug : product.slug }) }}"><img src="/assets/img/products/{{ product.illustration }}"></a></figure>
+            <h1>{{ product.name }}</h1>
+            <section class="buyBox">
+                <h2>{{ product.category }}<h2>
+                        <div>
+                            <p>{{ (product.price /100)|number_format(2, ',', '.')}} €</p>
+                            <p>buy</p>
+                        </div>
+            </section>
+        </div>
+    {% endfor %}
+
+
 </section>
 <script src="/assets/js/shop.js"></script>
 {% endblock %}
