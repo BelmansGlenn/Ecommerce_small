@@ -8,6 +8,12 @@ composer install
 ```
 composer require --dev symfony/profiler-pack
 ```
+```
+composer require admin
+```
+```
+composer require symfony/mime
+```
 ## Front-end cheatsheet 
 
 - Active sass
