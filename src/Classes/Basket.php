@@ -2,6 +2,8 @@
 
 namespace App\Classes;
 
+use App\Entity\Product;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class Basket
@@ -12,12 +14,20 @@ class Basket
     private SessionInterface $session;
 
     /**
-     * @param SessionInterface $session
+     * @var EntityManagerInterface
      */
-    public function __construct(SessionInterface $session)
+    private EntityManagerInterface $entityManager;
+
+    /**
+     * @param SessionInterface $session
+     * @param EntityManagerInterface $entityManager
+     */
+    public function __construct(SessionInterface $session, EntityManagerInterface $entityManager)
     {
         $this->session = $session;
+        $this->entityManager = $entityManager;
     }
+
 
     /**
      * @param $id
@@ -32,7 +42,7 @@ class Basket
         }else{
             $basket[$id] = 1;
         }
-        $this->session->set('basket', $basket);
+        return $this->session->set('basket', $basket);
     }
 
     /**
@@ -56,5 +66,45 @@ class Basket
         $basket = $this->session->get('basket', []);
         unset($basket[$id]);
         return $this->session->set('basket', $basket);
+    }
+
+    /**
+     * @param $id
+     */
+    public function substract($id)
+    {
+        $basket = $this->session->get('basket', []);
+
+        if($basket[$id]>1)
+        {
+            $basket[$id]--;
+        }else{
+            unset($basket[$id]);
+        }
+        return $this->session->set('basket', $basket);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFull()
+    {
+
+        $basketComplete = [];
+
+        if($this->get()) {
+            foreach ($this->get() as $id => $quantity) {
+                $product = $this->entityManager->getRepository(Product::class)->findOneById($id);
+                if(!$product){
+                    $this->delete($id);
+                    continue;
+                }
+                $basketComplete[] = [
+                    'product' => $product,
+                    'quantity' => $quantity
+                ];
+            }
+    }
+        return $basketComplete;
     }
 }

@@ -12,34 +12,15 @@ use Symfony\Component\Routing\Annotation\Route;
 class BasketController extends AbstractController
 {
 
-    private EntityManagerInterface $entityManager;
-
-    /**
-     * @param EntityManagerInterface $entityManager
-     */
-    public function __construct(EntityManagerInterface $entityManager)
-    {
-        $this->entityManager = $entityManager;
-    }
-
-
     /**
      * @Route("/mon-panier", name="basket")
      */
     public function index(Basket $basket): Response
     {
-        $basketComplete = [];
 
-        foreach ($basket->get() as $id => $quantity)
-        {
-            $basketComplete[] = [
-                'product' => $this->entityManager->getRepository(Product::class)->findOneById($id),
-                'quantity' => $quantity
-            ];
-        }
 
         return $this->render('basket/index.html.twig', [
-            'basket' => $basketComplete
+            'basket' => $basket->getFull()
         ]);
     }
 
@@ -72,6 +53,17 @@ class BasketController extends AbstractController
     {
 
         $basket->delete($id);
+
+        return $this->redirectToRoute('basket');
+    }
+
+    /**
+     * @Route("/mon-panier/soustraire/{id}", name="substract_to_basket")
+     */
+    public function substract(Basket $basket,int $id): Response
+    {
+
+        $basket->substract($id);
 
         return $this->redirectToRoute('basket');
     }

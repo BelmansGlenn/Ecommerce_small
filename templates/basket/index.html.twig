@@ -3,6 +3,7 @@
 {% block title %}Hello BasketController!{% endblock %}
 
 {% block body %}
+    {% if basket|length > 0 %}
     <html>
     <style>
         table, th, td {
@@ -25,7 +26,7 @@
             <td>
             <img src="/assets/img/products/{{ product.product.illustration }}" height="80px"></img>
             {{ product.product.name }}</td>
-            <td>{{ product.quantity }} <a href=""><i class="fas fa-minus"></i></a><a href=""><i class="fas fa-plus"></i></a></td>
+            <td>{{ product.quantity }} <a href="{{ path('substract_to_basket', {'id': product.product.id}) }}"><i class="fas fa-minus"></i></a><a href="{{ path('add_to_basket', {'id' : product.product.id }) }}"><i class="fas fa-plus"></i></a></td>
             <td>{{ (product.product.price/100)|number_format(2, ',', '.')}} €</td>
             <td>{{ ((product.product.price * product.quantity)/100)|number_format(2, ',', '.') }} €</td>
             <td><a href="{{ path('delete_from_basket', {'id': product.product.id}) }}"><i class="fas fa-trash"></i></a></td>
@@ -36,8 +37,12 @@
     <div>
         <h4>Nombre de produits: {{ basket|length }}</h4>
         <h4>Total de mon panier: {{ ((total)/100)|number_format(2, ',', '.') }} € </h4>
-        <a href="">Valider mon panier</a>
+        <a href="{{ path('remove_my_basket') }}"><p>Vider mon panier</p></a>
+        <a href=""><h2>Valider mon panier</h2></a>
     </div>
+        {% else %}
+        <h4>Votre panier est vide.</h4>
+    {% endif %}
 
     </body>
     </html>
