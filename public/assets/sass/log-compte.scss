@@ -111,6 +111,9 @@
 }
 
 // Espace compte 
+.compteMain {
+    margin-bottom: 30px;
+}
 .compteMain h1 {
     font-family: kudryashev-d-contrast, sans-serif;
     font-size: 28px;
@@ -124,6 +127,19 @@
     margin: 20px 43px;
 }
 .compteMain button {
+    width: 142px;
+    height: 60px;
+    color: #84c492;
+    font-family: arponasans, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin: auto;
+    border: 1px dotted #000;
+    // background-color: black;
+}
+.decoBtn {
     width: 142px;
     height: 43px;
     color: variables.$b;
@@ -144,10 +160,9 @@
     margin-top: 40px;
     margin-bottom: 20px;
 }
-.changeMdpForm p {
+.changeMdpForm label {
     font-family: agenda, sans-serif;
     font-size: 14px;
-    margin: 20px 43px;
 }
 .changeMdpForm form div {
     display: flex;
@@ -165,4 +180,33 @@
     text-transform: uppercase;
     margin: 15px 0px;
     text-align: center;
+}
+.changeMdpForm button {
+    width: 142px;
+    height: 43px;
+    color: variables.$b;
+    font-family: arponasans, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    border: 1px dotted variables.$b;
+}
+.annulerBtnBox {
+    margin-top: 20px;
+}
+.annulerBtnBox button {
+    width: 142px;
+    height: 43px;
+    color: variables.$red;
+    font-family: arponasans, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    border: 1px dotted variables.$red;
 }

@@ -6,7 +6,8 @@
 <section class="compteMain">
     <h1>Mon compte</h1>
     <p>Bienvenue dans vote espace personnel {{ app.user.firstname }}, ici vous pourrez modifier les informations liées à votre compte.</p>
-    <button><a href="{{ path('account_password') }}">Modifier mon mot de passe</a></button>
-    <button><a href="{{ path('app_logout') }}">Deconnexion</a></button>
+    <button><a href="{{ path('account_password') }}">Modifier<br>mon mot de passe</a></button>
 </section>
+<button class="decoBtn"><a href="{{ path('app_logout') }}">Deconnexion</a></button>
 {% endblock %}
+   
