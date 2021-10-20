@@ -24,7 +24,7 @@ class AccountPasswordController extends AbstractController
     }
 
     /**
-     * @Route("/moncompte/modifier-mot-de-passe", name="account_password")
+     * @Route("/mon-compte/modifier-mot-de-passe", name="account_password")
      */
     public function index(Request $request, UserPasswordHasherInterface $passwordHasher): Response
     {
