@@ -31,7 +31,7 @@
             <td>{{ ((product.product.price * product.quantity)/100)|number_format(2, ',', '.') }} €</td>
             <td><a href="{{ path('delete_from_basket', {'id': product.product.id}) }}"><i class="fas fa-trash"></i></a></td>
         </tr>
-            {% set total = total + (product.product.price + product.quantity) %}
+            {% set total = total + (product.product.price * product.quantity) %}
         {%  endfor %}
     </table>
     <div>
