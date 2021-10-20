@@ -3,24 +3,31 @@
 {% block title %}{{ product.name }}{% endblock %}
 
 {% block body %}
-
-    <section class="shopMain">
-            <div>
-                <figure><img src="/assets/img/products/{{ product.illustration }}"></figure>
-                <h1>{{ product.name }}</h1>
-                    <h2>{{ product.category }}<h2>
-                            <div>
-                                <p>{{ (product.price /100)|number_format(2, ',', '.')}} €</p>
-                                <a href="{{ path('add_to_basket', {"id": product.id}) }}">buy</a>
-                            </div>
-                <div>
-                    <p>{{ product.details }}</p>
-                    <p>{{ product.dimensions }}</p>
-                </div>
-
-            </div>
-
-
+<section class="zoomProduct">
+    <header>
+        <h1>{{ product.name }}</h1>
+        <i class="far fa-heart"></i>
+    </header>
+    <figure>
+        <img src="/assets/img/products/{{ product.illustration }}">
+    </figure>
+    <section>
+        <div>
+            <h2>{{ product.category }}</h2>
+            <h3>{{ (product.price /100)|number_format(2, ',', '.')}} €</h3>
+        </div>
+        <div>
+            <a class="zoomPanierBtn" href="{{ path('add_to_basket', {"id": product.id}) }}">ajouter panier</a>
+            <a class="zoomBuyBtn" href="{{ path('add_to_basket', {"id": product.id}) }}">buy</a>
+        </div>
     </section>
-    <script src="/assets/js/shop.js"></script>
+    <footer>
+        <h1>Détails</h1>
+        <p>{{ product.details }}</p>
+        <h2>Dimensions</h2>
+        <p>{{ product.dimensions }}</p>
+    </footer>
+
+</section>
+<script src="/assets/js/shop.js"></script>
 {% endblock %}
