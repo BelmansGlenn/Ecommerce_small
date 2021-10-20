@@ -138,14 +138,14 @@
         color: variables.$w;
     }
 }
-.buyBox h2, .buyBox p {
+.buyBox h2, .buyBox p, .buyBox a {
     font-family: arponasans, sans-serif;
     font-size: 8px;
     text-transform: uppercase;
     text-align: center;
     width: 75px;
 }
-.buyBox p {
+.buyBox p, .buyBox a {
     height: 42px;
     display: flex;
     justify-content: center;
