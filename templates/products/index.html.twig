@@ -9,7 +9,7 @@
 
 <section class="shopNav">
     <h1>Notre collection</h1>
-    <div>
+    <div class="shopNavLiHack">
         <button id="filterBtn">filtrer</button>
         <button id="sortBtn">trier</button>
         <ol id="sortList">
@@ -25,8 +25,10 @@
         <ul>
             {{ form_start(searchForm) }}
             <li>{{ form_row(searchForm.string) }}</li>
-            <li>{{ form_row(searchForm.categories) }}</li>
-            <li>{{ form_row(searchForm.submit) }}</li>
+            <li class="paddFilter">
+                {{ form_row(searchForm.categories) }}
+                {{ form_row(searchForm.filterBtnCheck) }}
+            </li>
             {{ form_end(searchForm) }}
         </ul> 
     </nav>
