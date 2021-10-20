@@ -151,3 +151,94 @@
     justify-content: center;
     align-items: center;
 }
+
+
+// Zoom on product page 
+.zoomProduct header {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: arponasans, sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.zoomProduct header {
+
+}
+.zoomProduct figure {
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    padding: 0px 40px;
+    margin-top: 20px;
+	animation: zoomProd 1s ease 1;
+	}
+	@keyframes zoomProd {
+		0% {
+            padding: 0px 100px;
+            opacity: 0;
+		}
+        70% {
+            opacity: 1;
+        }
+		100% {
+            padding: 0px 40px;
+		}
+}
+.zoomProduct figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.zoomProduct section {
+    margin: 30px 60px;
+}
+.zoomProduct h2 {
+    font-family: arponasans, sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: variables.$gris;
+}
+.zoomProduct h3 {
+    font-family: arponasans, sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.zoomProduct div {
+    justify-content: space-evenly;
+    flex-direction: column;
+    display: flex;
+    
+}
+.zoomProduct div a {
+    font-family: arponasans, sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 10px 20px;
+    border: 1px dotted black;
+    text-align: center;
+}
+.zoomPanierBtn {
+    margin-top: 30px;
+    background-color: aquamarine;
+}
+.zoomBuyBtn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+.zoomProduct footer {
+    margin: 30px 60px;
+}
+.zoomProduct footer h1 {
+    font-family: arponasans, sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.zoomProduct footer p {
+    font-family: agenda, sans-serif;
+    font-size: 14px;
+}
