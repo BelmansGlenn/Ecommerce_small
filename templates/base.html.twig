@@ -21,6 +21,7 @@
         {% endblock %}
     </head>
     <body>
+    <div id="goTop"><i class="fas fa-long-arrow-alt-up"></i></div>
     <header class="headerB">
         <a href="{{ path('home') }}"><div class="logoHead">Glaira</div></a>
         <a href="{{ path('products') }}"><i class="icHead fas fa-bars"></i></a>
@@ -36,19 +37,19 @@
         {% block body %}{% endblock %}
     <footer class="baseFooter">
         <header>
-            <h1>Restons connecté !</h1>
-            <div>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-linkedin"></i>
-            </div>
             <figure>
                 <h1>Glaira.com</h1> 
-                <h2>Expert en mobilier d'intéreur depuis 1930.</h2>
+                <h2>Expert en mobilier depuis 1930.</h2>
             </figure>
+            <h1>Restez connecté !</h1>
+            <div>
+                <a href="https://github.com/BelmansGlenn/Ecommerce_small"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/BelmansGlenn/Ecommerce_small"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/BelmansGlenn/Ecommerce_small"><i class="fab fa-linkedin"></i></a>
+            </div>
             <nav>
-                <section>
-                    <h1>Catalogue</h1>
+                <section id="catalogueStyle">
+                    <h1>Nore boutique</h1>
                     <div>
                         <ul>
                             <li><a href="{{ path('products') }}">Curiosités<a></li>
@@ -67,29 +68,43 @@
                     </div>
                 </section>
                 <section>
-                    <h1>Service client</h1>
+                    <h1>Espace client</h1>
                     <div>
                         <ul>
-                            <li><a href="{{ path('products') }}">Contactez nous<a></li>
-                            <li><a href="{{ path('products') }}">Retour et livraison<a></li>
-                            <li><a href="{{ path('products') }}">FAQ<a></li>
-                            <li><a href="{{ path('account') }}">Mon compte<a></li>
-                            <li><a href="{{ path('products') }}">Abonnement<a></li>
-                        </ul>
+                            <li><a href="{{ path('account') }}">Code promo<a></li>
+                            <li><a href="{{ path('account_address') }}">Retour et livraison<a></li>
+                            <li><a href="{{ path('home') }}">FAQ<a></li>                        </ul>
                         <ul>
-                            <li><a href="{{ path('products') }}">Cartes cadeau<a></li>
+                            <li><a href="{{ path('basket') }}">Favoris<a></li>
                             <li><a href="{{ path('products') }}">Soldes<a></li>
-                            <li><a href="{{ path('products') }}">Créer un compte<a></li>
+                            <li><a href="{{ path('home') }}">Abonnement<a></li>
                         </ul>
                     </div>
-                </section
+                </section>
+                <section>
+                    <h1>Contact</h1>
+                    <div>
+                        <ul>
+                            <li><a href="{{ path('home') }}">Contactez nous<a></li>
+                            <li><a href="{{ path('home') }}">Adresses<a></li>
+                            <li><a href="{{ path('products') }}">Job<a></li>
+                            <li><a href="{{ path('account') }}">Mon compte<a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="{{ path('register') }}">Créer un compte<a></li>
+                            <li><a href="{{ path('account') }}">Cartes cadeau<a></li>
+                        </ul>
+                    </div>
+                </section>
             </nav>
             <footer>
-                <h1>Glaira<span><span>©</span>2021</span></h1>
-                <h2>All Rights Reserved.</h2>
-                <h3>Made by A&G.</h3>
+                <h1>Glaira</h1>
+                <p>© 2021</p>
+                <h2>Made by Rune Studio. All Rights Reserved.</h2>
             </footer>
         </header>
     </footer>
+    <script src="/assets/js/base.js"></script>
+
     </body>
 </html>

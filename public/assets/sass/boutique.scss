@@ -116,7 +116,7 @@
     font-size: 14px;
     text-transform: uppercase;
     text-align: center;
-    background-color: variables.$blue;
+    background-color: variables.$greenF;
     padding: 4px 0px;
 }
 .buyBox {
@@ -191,17 +191,21 @@
 .zoomProduct section {
     margin: 30px 60px;
 }
+.zoomProduct h1 {
+    margin: 20px 0px;
+}
 .zoomProduct h2 {
     font-family: arponasans, sans-serif;
     text-transform: uppercase;
-    font-size: 20px;
-    color: variables.$gris;
+    font-size: 16px;
+    color: black !important;
+    margin: 20px 0px;
 }
 .zoomProduct h3 {
     font-family: arponasans, sans-serif;
     text-transform: uppercase;
     font-size: 18px;
-    margin-top: 20px;
+    margin: 20px
 }
 .zoomProduct div {
     justify-content: space-evenly;
@@ -219,7 +223,7 @@
 }
 .zoomPanierBtn {
     margin-top: 30px;
-    background-color: aquamarine;
+    background-color: variables.$green;
 }
 .zoomBuyBtn {
     background-color: black;
