@@ -46,7 +46,6 @@ body {
 .baseFooter {
     width: 100%;
     margin-top: 30px;
-    border-top: 1px dotted black;
     padding-top: 30px;
 }
 .baseFooter header h1 {
@@ -72,11 +71,12 @@ body {
     }
 }
 .baseFooter figure {
-    background-color: #96D4C7;
+    background-color: variables.$greenF;
     padding: 10px 0px 20px 0px;
     border: 1px dotted;
     border-left: none;
     border-right: none;
+    margin-bottom: 40px;
     h1 {
         font-family: tuppence, serif;
         font-size: 33px;   
@@ -88,19 +88,23 @@ body {
         text-align: center;
     }
 }
+.baseFooter nav {
+    width: 100%;
+}
+
 .baseFooter nav section {
     display: flex;
     flex-direction: column;
     width: 100%;
+    overflow: hidden;
+
 }
 .baseFooter nav section div {
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
+    justify-content: start;
+    margin: 0px 0px 20px 8%;
     width: 100%;
-}
-.baseFooter nav section div ul { 
-    margin: 0px 10px;
+    white-space: nowrap;
 }
 .baseFooter nav section div li {
     display: flex;
@@ -109,6 +113,28 @@ body {
     font-size: 14px;
     color: #000000;
     line-height: 21px;
+}
+#catalogueStyle {
+    background-color: variables.$w;
+    border-bottom: 1px dotted black;
+    border-top: 1px dotted black;
+    padding-bottom: 20px;
+}
+#catalogueStyle div ul li a {
+    font-family: arponasans, sans-serif;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+#catalogueStyle h1 {
+    font-family: kudryashev-d-contrast, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px 0px;
+    font-size: 28px;
+    
+}
+.baseFooter nav section div ul {
+    margin: 0px 33% 0px 0px;
 }
 .baseFooter nav section h1 {
     font-family: arponasans, sans-serif;
@@ -189,7 +215,7 @@ body {
 // Twig base end 
 // Home start 
 .hPromoBox {
-    background-color: #0B182D;
+    background: #00173ab8;
     width: 100%;
     height: 400px;
     display: flex;

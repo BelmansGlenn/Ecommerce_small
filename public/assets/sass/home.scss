@@ -1,3 +1,8 @@
+@use 'variables.scss';
+.noisy {
+    background: url(https://lunaus.com/images/noisy.gif) center;
+	width: 100%;
+}
 .promoAnim {
 	position: absolute;
 	left: 0;
@@ -8,7 +13,7 @@
 	height: 40vh;
 	border-radius: 50%;
     font-weight: bold;
-    color: #6EB5E0;
+    color: variables.$green;
 	animation: spinZ 20s linear infinite, animSoldes 3s ease-in-out 1;
 	text-align: center;
 	font-family: masqualero-groove, sans-serif;

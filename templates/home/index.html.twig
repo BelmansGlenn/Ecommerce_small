@@ -3,13 +3,15 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-<section class= "hPromoBox">
-    <div class="promoAnim">Les soldes d'hivers sont là!</div>
-    <div class="hPromo">
-        <h2>Profitez de 20% sur nos soldes spécial fin d'année.</h2>
-        <a href="{{ path('products') }}">SHOP NOW</a>
-    </div>
-</section>
+<div class="noisy">
+    <section class= "hPromoBox">
+        <div class="promoAnim">Les soldes d'hivers sont là!</div>
+        <div class="hPromo">
+            <h2>Profitez de 20% sur nos soldes spécial fin d'année.</h2>
+            <a href="{{ path('products') }}">SHOP NOW</a>
+        </div>
+    </section>
+</div>
 <section class="showBoxHome spaceShowB">
     <h1>Collections</h1>
     <div class="boxHome">
