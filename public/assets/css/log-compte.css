@@ -135,23 +135,32 @@
   margin: 20px 43px;
 }
 
+.compteMain p span {
+  text-transform: uppercase;
+  color: #707070;
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .compteMain button {
-  width: 142px;
-  height: 60px;
-  color: #84c492;
+  width: 70%;
+  color: #616161;
   font-family: arponasans, sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
   text-align: center;
   display: block;
   margin: auto;
   border: 1px dotted #000;
+  margin-top: 17px;
+  padding: 10px 0px;
+  border-radius: 5px;
 }
 
 .decoBtn {
   width: 142px;
   height: 43px;
-  color: #000000;
+  color: #f59494;
   font-family: arponasans, sans-serif;
   font-size: 14px;
   text-transform: uppercase;
@@ -159,7 +168,11 @@
   text-align: center;
   display: block;
   margin: auto;
-  border: 1px dotted #000000;
+  border: 1px dotted #f59494;
+}
+
+.changeMdpForm {
+  margin: 0px 20px;
 }
 
 .changeMdpForm h1 {
@@ -197,7 +210,7 @@
 .changeMdpForm button {
   width: 142px;
   height: 43px;
-  color: #000000;
+  color: #707070;
   font-family: arponasans, sans-serif;
   font-size: 14px;
   text-transform: uppercase;
@@ -206,6 +219,10 @@
   display: block;
   margin: auto;
   border: 1px dotted #000000;
+}
+
+.changeMdpForm form :nth-child(3) {
+  margin-top: 25px;
 }
 
 .annulerBtnBox {
@@ -224,6 +241,119 @@
   display: block;
   margin: auto;
   border: 1px dotted #f59494;
+}
+
+.adressMain header h1 {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 43px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.adressMain header p {
+  font-family: agenda, sans-serif;
+  font-size: 14px;
+  margin: 20px 43px;
+}
+
+.adressMain header span {
+  text-transform: uppercase;
+  color: #707070;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.adressMain article {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #d8ffe9;
+  margin: 30px 30px 17px 30px;
+  padding: 30px 30px;
+  border: 1px dotted black;
+}
+
+.adressMain article div h1 {
+  font-family: arponasans, sans-serif;
+  text-transform: uppercase;
+  color: #707070;
+  font-size: 22px;
+  line-height: 20px;
+}
+
+.adressMain article div p {
+  font-family: agenda, sans-serif;
+  text-transform: uppercase;
+  color: #000000;
+  font-size: 12px;
+  text-align: start;
+  margin: 12px 0px 0px 0px;
+}
+
+.adressMain article section {
+  font-family: agenda, sans-serif;
+  text-transform: uppercase;
+  color: #000000;
+  font-size: 11px;
+  text-align: end;
+}
+
+.adressMain footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.adressMain footer button {
+  font-family: arponasans, sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px 15px;
+  border: 1px dotted #000000;
+}
+
+.adressMain footer :nth-child(2) {
+  color: #fe9dab;
+  border: 1px dotted #f59494;
+}
+
+.retourAdress {
+  width: 142px;
+  height: 43px;
+  color: #ffffff;
+  font-family: arponasans, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  text-align: center;
+  display: block;
+  margin: auto;
+  border: 1px dotted #000000;
+  margin-top: 42px;
+  padding: 10px 30px;
+  background: #000000;
+}
+
+#address_country {
+  background-color: black;
+  width: 225px;
+  height: 55px;
+  border: none;
+  color: #ffffff;
+  font-family: agenda, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  text-align: center;
+}
+
+.fixFormHack :nth-child(3) {
+  margin-top: 0px !important;
+}
+
+#address_submit {
+  color: #000000 !important;
+  width: 80% !important;
+  margin: 20px 0px;
 }
 
 /*# sourceMappingURL=log-compte.css.map */
