@@ -267,7 +267,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #d8ffe9;
+  background-color: #e9e9e9;
   margin: 30px 30px 17px 30px;
   padding: 30px 30px;
   border: 1px dotted black;
@@ -300,7 +300,8 @@
 
 .adressMain footer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  margin: 0px 30px;
 }
 
 .adressMain footer button {
@@ -314,6 +315,7 @@
 .adressMain footer :nth-child(2) {
   color: #fe9dab;
   border: 1px dotted #f59494;
+  margin-left: 15px;
 }
 
 .retourAdress {

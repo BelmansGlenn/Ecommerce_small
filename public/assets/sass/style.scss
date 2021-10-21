@@ -59,7 +59,16 @@ body {
     justify-content: center;
     font-size: 28px;
     i {
-        margin: 10px 20px 30px 20px;
+        margin: 30px 20px 30px 20px;
+        animation: bounceIcon 9s cubic-bezier(0.280, 0.840, 0.420, 1) infinite;
+        @keyframes bounceIcon {
+            0%   { transform: scale(1,1)      translateY(0); }
+            72%  { transform: scale(1,1)      translateY(0); }
+            76%  { transform: scale(.9,1.1)   translateY(-10px); }
+            85%  { transform: scale(1.05,.95) translateY(0); }
+            90%  { transform: scale(1,1)      translateY(-3px); }
+            100% { transform: scale(1,1)      translateY(0); }
+        }
     }
 }
 .baseFooter figure {
@@ -114,20 +123,29 @@ body {
     background-color: black;
 }
 .baseFooter footer h1 {
-    font-family: kudryashev-d-contrast, sans-serif;
+    font-family: tuppence, serif;
+    font-weight: 200;
     font-size: 43px;
     text-align: center;
     color: variables.$w;
     padding: 35px 0px 0px 0px;
     span {
-        font-size: 38px;
+        font-size: 33px;
         text-decoration:dotted;
-        color: variables.$gris;
+        color: #437269;
         span {
             margin:0px 8px 0px 12px;
         }
     }
 }
+.baseFooter footer p { 
+    font-family: tuppence, serif;
+    font-size: 14px;
+    color: #555b5b;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 .baseFooter footer h2 { 
     font-family: agenda, sans-serif;
     font-size: 14px;
@@ -135,12 +153,37 @@ body {
     text-align: center;
     padding-bottom: 40px;
 }
-.baseFooter footer h3 { 
-    font-family: agenda, sans-serif;
-    font-size: 14px;
-    color: variables.$w;
-    text-align: center;
-    padding-bottom: 20px;
+#goTop {
+    background: #d0d0d0;
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    right: 3%;
+    bottom: 5%;
+    animation: goTop 1s ease-in-out 1;
+    @keyframes goTop {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    display: none;
+}
+@keyframes popOff {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
 }
 
 // Twig base end 

@@ -20,3 +20,4 @@ var promoAnim = {
   };
   
   promoAnim.init('.promoAnim');
+
