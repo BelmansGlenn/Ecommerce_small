@@ -1,0 +1,190 @@
+.panierMain h1 {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 43px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.deleteProdBasket {
+  color: #f59494;
+  display: flex;
+  height: 35px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.deleteProdBasket a {
+  background-color: #ffdcdc;
+  display: flex;
+  height: 18px;
+  width: 18px;
+  justify-content: center;
+  align-items: center;
+  top: 17px;
+  position: relative;
+  border-radius: 50%;
+  margin: 0px 15px 0px 0px;
+  font-size: 9px;
+}
+
+.panierMain figure {
+  width: 50%;
+  height: 100px;
+}
+
+.panierMain section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.panierMain figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.panierMain article {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 100%;
+  padding: 17px 0px;
+}
+
+.panierMain h2 {
+  font-family: arponasans, sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #000000;
+}
+
+.panierMain h3 {
+  font-family: agenda, sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #707070;
+}
+
+.panierMain h3 {
+  font-family: agenda, sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #707070;
+}
+
+.panierMain section div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 12px;
+  margin: 20px 48px 0px 0px;
+}
+
+.panierMain section div p {
+  border: 1px dotted black;
+  font-family: agenda, sans-serif;
+  border-radius: 15%;
+  width: 27px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7fffd469;
+  font-size: 14px;
+}
+
+.panierMain h4 {
+  border: 1px dotted black;
+  border-right: none;
+  font-family: arponasans, sans-serif;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 18px;
+  text-align: center;
+  background: #000;
+  color: white;
+}
+
+.panierFinal {
+  background: white;
+  margin: 40px 0px;
+  padding: 35px 20px;
+}
+
+.panierFinal h1 {
+  font-family: arponasans, sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.panierFinal h2 {
+  font-family: agenda, sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.panierFinal h3 {
+  font-family: agenda, sans-serif;
+  font-size: 15px;
+  color: #707070;
+}
+.panierFinal h3 a {
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+.finalBuyBtn {
+  font-family: arponasans, sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+}
+
+.panierFinal section {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.panierFinal div {
+  font-family: arponasans, sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #707070;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.panierFinal div :nth-child(1) {
+  font-family: arponasans, sans-serif;
+  font-size: 12px;
+  color: #fe9dab;
+  border: 1px dotted #f59494;
+  padding: 5px 15px;
+}
+
+.panierFinal div :nth-child(2) {
+  font-family: arponasans, sans-serif;
+  font-size: 12px;
+  color: #707070;
+  border: 1px dotted #707070;
+  padding: 5px 15px;
+}
+
+.panierVide {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 43px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=panier.css.map */
