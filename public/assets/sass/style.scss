@@ -43,6 +43,106 @@ body {
 .icHead {
     font-size: 20px;
 }
+.baseFooter {
+    width: 100%;
+    margin-top: 30px;
+    border-top: 1px dotted black;
+    padding-top: 30px;
+}
+.baseFooter header h1 {
+    font-family: kudryashev-d-contrast, sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+.baseFooter header div {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    i {
+        margin: 10px 20px 30px 20px;
+    }
+}
+.baseFooter figure {
+    background-color: #96D4C7;
+    padding: 10px 0px 20px 0px;
+    border: 1px dotted;
+    border-left: none;
+    border-right: none;
+    h1 {
+        font-family: tuppence, serif;
+        font-size: 33px;   
+    }
+    h2 {
+        font-family: agenda, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+.baseFooter nav section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.baseFooter nav section div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.baseFooter nav section div ul { 
+    margin: 0px 10px;
+}
+.baseFooter nav section div li {
+    display: flex;
+    list-style: none;
+    font-family: agenda, sans-serif;
+    font-size: 14px;
+    color: #000000;
+    line-height: 21px;
+}
+.baseFooter nav section h1 {
+    font-family: arponasans, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: variables.$gris;
+    font-size: 25px;
+    margin: 30px 0px 20px 46px;
+    text-align: start;
+}
+.baseFooter footer {
+    background-color: black;
+}
+.baseFooter footer h1 {
+    font-family: kudryashev-d-contrast, sans-serif;
+    font-size: 43px;
+    text-align: center;
+    color: variables.$w;
+    padding: 35px 0px 0px 0px;
+    span {
+        font-size: 38px;
+        text-decoration:dotted;
+        color: variables.$gris;
+        span {
+            margin:0px 8px 0px 12px;
+        }
+    }
+}
+.baseFooter footer h2 { 
+    font-family: agenda, sans-serif;
+    font-size: 14px;
+    color: variables.$gris;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.baseFooter footer h3 { 
+    font-family: agenda, sans-serif;
+    font-size: 14px;
+    color: variables.$w;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 // Twig base end 
 // Home start 
 .hPromoBox {
