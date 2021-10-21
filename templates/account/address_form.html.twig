@@ -4,9 +4,8 @@
 {% block title %}Ajouter une adresse{% endblock %}
 
 {% block body %}
-    <section class="changeMdpForm">
+    <section class="changeMdpForm fixFormHack">
         <h1>Ajouter une adresse</h1>
-        <button class="annulerMdp"><a href="{{ path('account_address') }}">Retour</a></button>
         {{ form_start(addressForm) }}
         {{ form_row(addressForm.name) }}
         {{ form_row(addressForm.firstname) }}
@@ -18,6 +17,8 @@
         {{ form_row(addressForm.country)}}
         {{ form_row(addressForm.phone)}}
         {{ form_end(addressForm) }}
+        <button class="annulerMdp"><a href="{{ path('account_address') }}">Retour</a></button>
+
     </section>
 
 
