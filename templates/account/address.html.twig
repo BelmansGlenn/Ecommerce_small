@@ -1,0 +1,29 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Adresses{% endblock %}
+
+{% block body %}
+    <section class="changeMdpForm">
+        <h1>Mes adresses</h1>
+        <p>Bonjour {{ app.user.firstname }},<br> c'est dans cet espace que vous allez pouvoir gérer toutes vos adresses.
+            <button class="annulerMdp"><a href="{{ path('account') }}">Retour</a></button>
+            <button class="annulerMdp"><a href="{{ path('account_address_add') }}">Ajouter une addresse</a></button>
+            {% if app.user.addresses|length == 0 %}
+        <p>Vous n'avez pas encore ajouté d'adresse.</p>
+        {% else %}
+        {% for address in app.user.addresses %}
+            <p>{{ address.name }}</p>
+            <p>{{ address.address }}</p>
+            <p>{{ address.postal }}</p>
+            <p>{{ address.city }}</p>
+            <p>{{ address.country }}</p>
+            <p>{{ address.phone }}</p>
+            <button><a href="{{ path('account_address_edit', {'id': address.id}) }}">Modifier</a></button>
+            <button><a href="{{ path('account_address_remove', {'id': address.id}) }}">Supprimer</a></button>
+        {% endfor %}
+        {% endif %}
+    </section>
+
+
+{% endblock %}
