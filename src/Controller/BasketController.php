@@ -6,6 +6,7 @@ use App\Classes\Basket;
 use App\Entity\Product;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -27,7 +28,20 @@ class BasketController extends AbstractController
     /**
      * @Route("/mon-panier/ajouter/{id}", name="add_to_basket")
      */
-    public function add(Basket $basket,int $id): Response
+    public function add(Basket $basket,int $id, Request $request): Response
+    {
+
+        $basket->add($id);
+
+        $referer = $request->headers->get('referer');
+
+        return $this->redirect($referer);
+    }
+
+    /**
+     * @Route("/mon-panier/ajouter-panier/{id}", name="add_and_stay_basket")
+     */
+    public function addAndStayBasket(Basket $basket,int $id): Response
     {
 
         $basket->add($id);
