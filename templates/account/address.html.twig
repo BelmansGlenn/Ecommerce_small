@@ -33,6 +33,7 @@
             <button><a href="{{ path('account_address_remove', {'id': address.id}) }}">Supprimer</a></button>
         </footer>
     {% endfor %}
+    <button class="createAdress"><a href="{{ path('account_address_add') }}">Ajouter une adresse</a></button>
     <button class="retourAdress"><a href="{{ path('account') }}">Retour</a></button> 
     {% endif %}
 </section>
