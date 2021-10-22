@@ -6,7 +6,9 @@
 {% block body %}
 <section class="adressMain">
     {% if app.user.addresses|length == 0 %}
-        <p>Vous n'avez pas encore ajouté d'adresse.</p>
+        <p class="errorMsg">Vous n'avez pas encore ajouté d'adresse.</p>
+        <button class="createAdress"><a href="{{ path('account_address_add') }}">Ajouter une adresse</a></button>
+
     {% else %}
         <header>
             <h1>Mes adresses</h1>
@@ -33,6 +35,7 @@
             <button><a href="{{ path('account_address_remove', {'id': address.id}) }}">Supprimer</a></button>
         </footer>
     {% endfor %}
+    <button class="createAdress"><a href="{{ path('account_address_add') }}">Ajouter une adresse</a></button>
     <button class="retourAdress"><a href="{{ path('account') }}">Retour</a></button> 
     {% endif %}
 </section>

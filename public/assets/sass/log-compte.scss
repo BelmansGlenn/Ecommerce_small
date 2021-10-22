@@ -225,7 +225,12 @@
 }
 
 // Adresses page 
-
+.errorMsg {
+    font-family: kudryashev-d-contrast, sans-serif;
+    font-size: 43px;
+    text-align: center;
+    margin-top: 40px;
+}
 .adressMain header h1 {
     font-family: kudryashev-d-contrast, sans-serif;
     font-size: 43px;
@@ -291,7 +296,21 @@
     border: 1px dotted #f59494;
     margin-left: 15px;
 }
-
+.createAdress {
+    width: 70%;
+    color: variables.$b;
+    background-color: #81ffd5;;
+    font-family: arponasans, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin: auto;
+    border: 1px dotted #000;
+    margin-top: 35px;
+    padding: 10px 0px;
+    border-radius: 5px;
+}
 .retourAdress {
     width: 142px;
     height: 43px;
@@ -304,7 +323,7 @@
     display: block;
     margin: auto;
     border: 1px dotted #000000;
-    margin-top: 42px;
+    margin-top: 30px;
     padding: 10px 30px;
     background: variables.$b;
 }
