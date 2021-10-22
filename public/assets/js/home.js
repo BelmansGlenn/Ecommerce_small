@@ -21,3 +21,15 @@ var promoAnim = {
   
   promoAnim.init('.promoAnim');
 
+
+  // Caroussel 
+
+  const clcBtn = document.querySelector(".clcBtn")
+  const ecgBtn = document.querySelector(".ecgBtn")
+
+  function filterShop() {
+    clcBtn.addEventListener('click', (el) =>{ 
+      alert("gg")
+    })
+}
+filterShop()

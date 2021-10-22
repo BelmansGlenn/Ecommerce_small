@@ -257,6 +257,11 @@
     padding: 30px 30px;
     border: 1px dotted black;
 }
+.adressMain article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .adressMain article div h1 {
     font-family: arponasans, sans-serif;
     text-transform: uppercase;
@@ -265,12 +270,12 @@
     line-height: 20px;
 }
 .adressMain article div p {
-    font-family: agenda, sans-serif;
-    text-transform: uppercase;
+    font-family: recherche, sans-serif;
     color: #000000;
-    font-size: 12px;
-    text-align: start;
+    font-size: 31px;
+    text-align: center;
     margin: 12px 0px 0px 0px;
+    line-height: 35px;
 }
 .adressMain article section {
     font-family: agenda, sans-serif;
@@ -278,6 +283,11 @@
     color: #000000;
     font-size: 11px;
     text-align: end;
+    :nth-child(1), :nth-child(2) {
+        font-family: arponasans, sans-serif;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
 }
 .adressMain footer {
     display: flex;
