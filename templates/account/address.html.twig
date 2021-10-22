@@ -6,7 +6,9 @@
 {% block body %}
 <section class="adressMain">
     {% if app.user.addresses|length == 0 %}
-        <p>Vous n'avez pas encore ajouté d'adresse.</p>
+        <p class="errorMsg">Vous n'avez pas encore ajouté d'adresse.</p>
+        <button class="createAdress"><a href="{{ path('account_address_add') }}">Ajouter une adresse</a></button>
+
     {% else %}
         <header>
             <h1>Mes adresses</h1>

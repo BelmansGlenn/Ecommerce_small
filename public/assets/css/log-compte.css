@@ -243,6 +243,13 @@
   border: 1px dotted #f59494;
 }
 
+.errorMsg {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 43px;
+  text-align: center;
+  margin-top: 40px;
+}
+
 .adressMain header h1 {
   font-family: kudryashev-d-contrast, sans-serif;
   font-size: 43px;
