@@ -35,8 +35,9 @@
             <a href="{{ path('basket') }}"><i class="icHead fas fa-shopping-basket"></i></a>
         </section>
     </header>
-        {% block body %}{% endblock %}
 
+        {% block body %}
+        {% endblock %}
 
     <footer class="baseFooter">
         {% block footer %}
@@ -54,37 +55,35 @@
             <nav>
             {% block boutique %}
             {% endblock %}
-
-            <section>
-                <h1>Espace client</h1>
-                <div>
-                    <ul>
-                        <li><a href="{{ path('account') }}">Code promo<a></li>
-                        <li><a href="{{ path('account_address') }}">Retour et livraison<a></li>
-                        <li><a href="{{ path('home') }}">FAQ<a></li>                        </ul>
-                    <ul>
-                        <li><a href="{{ path('basket') }}">Favoris<a></li>
-                        <li><a href="{{ path('products') }}">Soldes<a></li>
-                        <li><a href="{{ path('home') }}">Abonnement<a></li>
-                    </ul>
-                </div>
-            </section>
-            <section>
-                <h1>Contact</h1>
-                <div>
-                    <ul>
-                        <li><a href="{{ path('home') }}">Contactez nous<a></li>
-                        <li><a href="{{ path('home') }}">Adresses<a></li>
-                        <li><a href="{{ path('products') }}">Job<a></li>
-                        <li><a href="{{ path('account') }}">Mon compte<a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="{{ path('register') }}">Créer un compte<a></li>
-                        <li><a href="{{ path('account') }}">Cartes cadeau<a></li>
-                    </ul>
-                </div>
-            </section>
-
+                <section>
+                    <h1>Espace client</h1>
+                    <div>
+                        <ul>
+                            <li><a href="{{ path('account') }}">Code promo<a></li>
+                            <li><a href="{{ path('account_address') }}">Retour et livraison<a></li>
+                            <li><a href="{{ path('home') }}">FAQ<a></li>                        </ul>
+                        <ul>
+                            <li><a href="{{ path('basket') }}">Favoris<a></li>
+                            <li><a href="{{ path('products') }}">Soldes<a></li>
+                            <li><a href="{{ path('home') }}">Abonnement<a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h1>Contact</h1>
+                    <div>
+                        <ul>
+                            <li><a href="{{ path('home') }}">Contactez nous<a></li>
+                            <li><a href="{{ path('home') }}">Adresses<a></li>
+                            <li><a href="{{ path('products') }}">Job<a></li>
+                            <li><a href="{{ path('account') }}">Mon compte<a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="{{ path('register') }}">Créer un compte<a></li>
+                            <li><a href="{{ path('account') }}">Cartes cadeau<a></li>
+                        </ul>
+                    </div>
+                </section>
             </nav>
             <footer>
                 <h1>Glaira</h1>

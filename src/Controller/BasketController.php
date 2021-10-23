@@ -18,8 +18,6 @@ class BasketController extends AbstractController
      */
     public function index(Basket $basket): Response
     {
-
-
         return $this->render('basket/index.html.twig', [
             'basket' => $basket->getFull()
         ]);

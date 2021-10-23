@@ -69,12 +69,17 @@
 .showBoxHome figure {
     height: 300px;
     width: 265px;
-    // display: flex;
-    background-color: bisque;
+    background-color: variables.$greenF;
     img {
         width: 100%;
         height: 100%;
-        object-fit: fill;
+        object-fit: cover;
+        animation: popImg 1s ease-in 1;
+        @keyframes popImg {
+            0% {
+                opacity: 0;
+            }
+        }
     }
 }
 .boxHome {
