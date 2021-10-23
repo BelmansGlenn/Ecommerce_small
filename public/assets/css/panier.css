@@ -109,8 +109,9 @@
 
 .panierFinal {
   background: white;
-  margin: 40px 0px;
+  margin: 40px 0px 0px 0px;
   padding: 35px 20px;
+  position: absolute;
 }
 
 .panierFinal h1 {
@@ -181,10 +182,25 @@
 }
 
 .panierVide {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.panierVide h1 {
   font-family: kudryashev-d-contrast, sans-serif;
   font-size: 43px;
   text-align: center;
-  margin-top: 20px;
+}
+.panierVide a {
+  font-family: arponasans, sans-serif;
+  font-size: 12px;
+  color: #707070;
+  border: 1px dotted #707070;
+  padding: 5px 15px;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=panier.css.map */

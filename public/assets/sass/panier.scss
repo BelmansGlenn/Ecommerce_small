@@ -100,8 +100,9 @@
 
 .panierFinal {
     background: rgb(255, 255, 255);
-    margin: 40px 0px;
+    margin: 40px 0px 0px 0px;
     padding: 35px 20px;
+    position: absolute;
 }
 .panierFinal h1 {
     font-family: arponasans, sans-serif;
@@ -166,8 +167,25 @@
 // Extra 
 
 .panierVide {
-    font-family: kudryashev-d-contrast, sans-serif;
-    font-size: 43px;
-    text-align: center;
-    margin-top: 20px;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    h1 {
+        font-family: kudryashev-d-contrast, sans-serif;
+        font-size: 43px;
+        text-align: center;
+        // margin: 20px 0px 50px 0px;
+    }
+    a {
+        font-family: arponasans, sans-serif;
+        font-size: 12px;
+        color: #707070;
+        border: 1px dotted #707070;
+        padding: 5px 15px;
+        text-transform: uppercase;
+    }
 }
+

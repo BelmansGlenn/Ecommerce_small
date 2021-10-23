@@ -11,7 +11,7 @@
     <span class="deleteProdBasket"><a href="{{ path('delete_from_basket', {'id': product.product.id}) }}"><i class="fas fa-times"></i></a></span>
     <article>
         <figure>            
-            <img src="/assets/img/products/{{ product.product.illustration }}" height="80px"></img>
+            <a href="{{path('product',  {'slug':  product.product.slug})}}"><img src="/assets/img/products/{{ product.product.illustration }}" height="80px"></img></a>
         </figure>
         <section>
             <header>
@@ -42,14 +42,17 @@
     <section>
         <a class="finalBuyBtn" href="{{ path('remove_my_basket') }}">Finaliser ma commande</a>
         <div>
-            <a href="{{ path('remove_my_basket') }}">Annuler</a>
+            <a href="{{ path('remove_my_basket') }}">Vider mon panier</a>
             <a href="{{ path('products') }}">Continuer shopping</a>
         </div>
     </section>
 </section>
 
 {% else %}
-    <h1 class="panierVide">Votre panier est vide.</h1>
+<section class="panierVide">
+    <h1>Votre panier est vide.</h1>
+    <a href="{{ path('products') }}">Continuer shopping</a>
+</section>
 {% endif %}
 
 
@@ -57,58 +60,3 @@
 
 {% block footer %}
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-    {# {% if basket|length > 0 %}
-    <html>
-    <style>
-        table, th, td {
-            border:1px solid black;
-        }
-    </style>
-    <body>
-<h1>Mon panier</h1>
-    <table style="width:100%">
-        <tr>
-            <th>Produit</th>
-            <th>Quantité</th>
-            <th>Prix</th>
-            <th>Total</th>
-            <th></th>
-        </tr>
-        {% set total = null %}
-        {% for product in basket %}
-        <tr>
-            <td>
-            <img src="/assets/img/products/{{ product.product.illustration }}" height="80px"></img>
-            {{ product.product.name }}</td>
-            <td>{{ product.quantity }} <a href="{{ path('substract_to_basket', {'id': product.product.id}) }}"><i class="fas fa-minus"></i></a><a href="{{ path('add_to_basket', {'id' : product.product.id }) }}"><i class="fas fa-plus"></i></a></td>
-            <td>{{ (product.product.price/100)|number_format(2, ',', '.')}} €</td>
-            <td>{{ ((product.product.price * product.quantity)/100)|number_format(2, ',', '.') }} €</td>
-            <td><a href="{{ path('delete_from_basket', {'id': product.product.id}) }}"><i class="fas fa-trash"></i></a></td>
-        </tr>
-            {% set total = total + (product.product.price * product.quantity) %}
-        {%  endfor %}
-    </table>
-    <div>
-        <h4>Nombre de produits: {{ basket|length }}</h4>
-        <h4>Total de mon panier: {{ ((total)/100)|number_format(2, ',', '.') }} € </h4>
-        <a href="{{ path('remove_my_basket') }}"><p>Vider mon panier</p></a>
-        <a href=""><h2>Valider mon panier</h2></a>
-    </div>
-        {% else %}
-        <h4>Votre panier est vide.</h4>
-    {% endif %}
-
-    </body>
-    </html>
-
-{% endblock %} #}
