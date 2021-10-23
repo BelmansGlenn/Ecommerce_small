@@ -36,7 +36,7 @@
 <section class="panierFinal">
     <header>
         <h1><span>Total : </span><span>{{ ((total)/100)|number_format(2, ',', '.') }} €</span></h1>
-        <h2><span>Nombres total de produits : </span><span>{{ basket|length }}</span></h2>
+        <h2><span>Nombres total de produits : </span><span>{{ app.session.get('basket')|reduce((carry, v) => carry + v) }}</span></h2>
         <h3>Profitez de notre abonnement annuel. <a href="{{ path('products') }}">En savoir plus</a></h3>
     </header>
     <section>
