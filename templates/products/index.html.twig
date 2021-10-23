@@ -35,7 +35,7 @@
 </section>
     <section class="shopMain">
     {% for product in products %}
-        <div>
+        <div id="prodBox">
             <figure><a href="{{ path('product', {slug : product.slug }) }}"><img src="/assets/img/products/{{ product.illustration }}"></a></figure>
             <h1>{{ product.name }}</h1>
             <section class="buyBox">

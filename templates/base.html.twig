@@ -69,10 +69,11 @@
                 <a href="https://github.com/BelmansGlenn/Ecommerce_small"><i class="fab fa-twitter"></i></a>
                 <a href="https://github.com/BelmansGlenn/Ecommerce_small"><i class="fab fa-linkedin"></i></a>
             </div>
-            <nav>
+            {# <nav> #}
             {% block boutique %}
             {% endblock %}
-                <section>
+            <nav>
+                <section id="espaceClientRes">
                     <h1>Espace client</h1>
                     <div>
                         <ul>
@@ -93,9 +94,9 @@
                             <li><a href="{{ path('home') }}">Contactez nous<a></li>
                             <li><a href="{{ path('home') }}">Adresses<a></li>
                             <li><a href="{{ path('products') }}">Job<a></li>
-                            <li><a href="{{ path('account') }}">Mon compte<a></li>
                         </ul>
                         <ul>
+                            <li><a href="{{ path('account') }}">Mon compte<a></li>
                             <li><a href="{{ path('register') }}">Créer un compte<a></li>
                             <li><a href="{{ path('account') }}">Cartes cadeau<a></li>
                         </ul>

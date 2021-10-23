@@ -187,9 +187,11 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  margin: 0px 15px;
 }
 #styleCatalogue li {
   margin: 0px 10px;
+  list-style: none;
 }
 
 #catalogueStyle {
@@ -203,6 +205,8 @@ body {
   font-family: arponasans, sans-serif;
   text-transform: uppercase;
   line-height: 30px;
+  font-size: 12px;
+  color: #707070;
 }
 
 #catalogueStyle h1 {
@@ -297,6 +301,26 @@ body {
   100% {
     opacity: 0;
     display: none;
+  }
+}
+@media (min-width: 600px) {
+  .baseFooter nav section h1 {
+    font-family: arponasans, sans-serif;
+    text-transform: uppercase;
+    color: #707070;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 35px;
+  }
+
+  .baseFooter nav {
+    width: 100%;
+    display: flex;
+    border-top: 1px dotted black;
+  }
+
+  #espaceClientRes {
+    border-right: 1px dotted black;
   }
 }
 
