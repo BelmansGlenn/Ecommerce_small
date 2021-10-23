@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Classes\Search;
+use App\Entity\Category;
 use App\Entity\Product;
 use App\Form\SearchType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -30,6 +31,7 @@ class ProductController extends AbstractController
     public function index(Request $request): Response
     {
         $products = $this->entityManager->getRepository(Product::class)->findAll();
+
 
         $search = new Search();
         $searchForm = $this->createForm(SearchType::class, $search);
@@ -62,6 +64,35 @@ class ProductController extends AbstractController
 
         return $this->render('products/show.html.twig', [
             'product' => $product
+        ]);
+    }
+
+    /**
+     * @Route("/nos-produits/{category}", name="products_category")
+     */
+    public function FilterFromHome(Request $request): Response
+    {
+        $oneCategory = $request->get('category');
+
+        $category = $this->entityManager->getRepository(Category::class)->findByName($oneCategory);
+        $products = $this->entityManager->getRepository(Product::class)->findWithFilter($category);
+
+
+        $search = new Search();
+        $searchForm = $this->createForm(SearchType::class, $search);
+
+        $searchForm->handleRequest($request);
+
+        if ($searchForm->isSubmitted() && $searchForm->isValid())
+        {
+            $products = $this->entityManager->getRepository(Product::class)->findWithSearch($search);
+        }
+
+
+
+        return $this->render('products/index.html.twig', [
+            'products' => $products,
+            'searchForm' => $searchForm->createView()
         ]);
     }
 }
