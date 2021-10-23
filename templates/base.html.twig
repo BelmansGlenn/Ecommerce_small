@@ -22,7 +22,9 @@
         {% endblock %}
     </head>
     <body>
+
     <div id="goTop"><i class="fas fa-long-arrow-alt-up"></i></div>
+
     <div class="boxHeadScroll">
         <header class="headerB">
             <a href="{{ path('home') }}"><div class="logoHead">Glaira</div></a>
@@ -34,6 +36,9 @@
                     <a href="{{ path('app_login') }}">Connexion</a>
                 {% endif %}
                 <a href="{{ path('basket') }}"><i class="icHead fas fa-shopping-basket"></i></a>
+                {% if app.session.get('basket') is null %}
+                {% else %}{{ app.session.get('basket')|reduce((carry, v) => carry + v) }}
+                {% endif %}</a>
             </section>
         </header>
         <nav class="menuOpened">
