@@ -104,12 +104,16 @@
 }
 
 .shopMain {
-  width: 325px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: auto;
   margin-top: 35px;
+}
+
+#prodBox {
+  margin: 10px 2px;
 }
 
 .shopMain div {
@@ -275,6 +279,19 @@
 .zoomProduct footer p {
   font-family: agenda, sans-serif;
   font-size: 14px;
+}
+
+@media (min-width: 600px) {
+  .zoomProduct figure {
+    height: 400px;
+  }
+
+  .zoomProduct section :nth-child(1) {
+    flex-direction: row;
+  }
+  .zoomProduct section :nth-child(1) h3 {
+    color: #707070;
+  }
 }
 
 /*# sourceMappingURL=boutique.css.map */
