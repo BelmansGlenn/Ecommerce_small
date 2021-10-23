@@ -1,4 +1,5 @@
 @use 'variables.scss';
+
 .noisy {
     background: url(https://lunaus.com/images/noisy.gif) center;
 	width: 100%;
@@ -28,7 +29,7 @@
 		top: 0;
 		bottom: 0;
 		text-transform: uppercase;
-		font-size: 5vh;
+		font-size: 38px;
 		transition: all .5s cubic-bezier(0,0,0,1);
 		animation: animSoldes 1s ease-out 1;
 
@@ -59,3 +60,5 @@
 		}
 	}
 }
+
+
