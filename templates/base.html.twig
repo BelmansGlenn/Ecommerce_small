@@ -24,21 +24,31 @@
     <body>
 
     <div id="goTop"><i class="fas fa-long-arrow-alt-up"></i></div>
-    <header class="headerB">
-        <a href="{{ path('home') }}"><div class="logoHead">Glaira</div></a>
-        <a href="{{ path('products') }}"><i class="icHead fas fa-bars"></i></a>
-        <section class="accHead">
-            {% if app.user %}
-                <a href="{{ path('account') }}">Compte</a>
-            {% else %}
-                <a href="{{ path('app_login') }}">Connexion</a>
-            {% endif %}
-            <a href="{{ path('basket') }}"><i class="icHead fas fa-shopping-basket"></i>
+
+    <div class="boxHeadScroll">
+        <header class="headerB">
+            <a href="{{ path('home') }}"><div class="logoHead">Glaira</div></a>
+            <a class="menuOpen" href="#"><i class="icHead fas fa-bars"></i></a>
+            <section class="accHead">
+                {% if app.user %}
+                    <a href="{{ path('account') }}">Compte</a>
+                {% else %}
+                    <a href="{{ path('app_login') }}">Connexion</a>
+                {% endif %}
+                <a href="{{ path('basket') }}"><i class="icHead fas fa-shopping-basket"></i></a>
                 {% if app.session.get('basket') is null %}
                 {% else %}{{ app.session.get('basket')|reduce((carry, v) => carry + v) }}
                 {% endif %}</a>
-        </section>
-    </header>
+            </section>
+        </header>
+        <nav class="menuOpened">
+            <ul>
+                <a href="{{ path('home') }}"><li>Home</li></a>
+                <a href="{{ path('products') }}"><li>Shop</li></a>
+                <a href="{{ path('products') }}"><li>Soldes</li></a>
+                <a href="{{ path('account') }}"><li>Compte</li></a>
+        </nav>
+    </div>
 
         {% block body %}
         {% endblock %}

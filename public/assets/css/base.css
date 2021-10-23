@@ -28,6 +28,33 @@ body {
   background-color: white;
 }
 
+.menuOpened {
+  display: none;
+  background-color: white;
+  width: 100%;
+  z-index: 10;
+  position: relative;
+}
+.menuOpened ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0px 10%;
+}
+.menuOpened ul :nth-child(3) {
+  color: #f59494;
+}
+.menuOpened ul li {
+  list-style: none;
+  padding-bottom: 20px;
+  font-family: agenda, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 16px 10px 0px 10px;
+  letter-spacing: 2px;
+}
+
 .logoHead {
   font-family: tuppence, serif;
   font-size: 33px;
