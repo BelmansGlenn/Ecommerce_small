@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Accueil!{% endblock %}
 
 {% block body %}
 <div class="noisy">
@@ -43,4 +43,69 @@
     </div>
 </section>
 <script src="/assets/js/home.js"></script>
+{% endblock %}
+{% block boutique %}
+    <section id="catalogueStyle">
+    <h1>Nore boutique</h1>
+    <div>
+        <ul>
+    {% for category in categories %}
+
+
+                <li><a href="{{ path('products_category', {'category': category.name }) }}">{{ category.name }}</a></li>
+
+    {% endfor %}
+        </ul>
+    </div>
+    </section>
+    <!--<nav>
+        <section id="catalogueStyle">
+            <h1>Nore boutique</h1>
+            <div>
+                <ul>
+                    <li><a href="{{ path('products') }}">Curiosités<a></li>
+                    <li><a href="{{ path('products') }}">Lits<a></li>
+                    <li><a href="{{ path('products') }}">Tables<a></li>
+                    <li><a href="{{ path('products') }}">Bancs<a></li>
+                    <li><a href="{{ path('products') }}">Chaises<a></li>
+                </ul>
+                <ul>
+                    <li><a href="{{ path('products') }}">Fauteils<a></li>
+                    <li><a href="{{ path('products') }}">Lampes<a></li>
+                    <li><a href="{{ path('products') }}">Murs<a></li>
+                    <li><a href="{{ path('products') }}">Bureaux<a></li>
+                    <li><a href="{{ path('products') }}">Tabourets<a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h1>Espace client</h1>
+            <div>
+                <ul>
+                    <li><a href="{{ path('account') }}">Code promo<a></li>
+                    <li><a href="{{ path('account_address') }}">Retour et livraison<a></li>
+                    <li><a href="{{ path('home') }}">FAQ<a></li>                        </ul>
+                <ul>
+                    <li><a href="{{ path('basket') }}">Favoris<a></li>
+                    <li><a href="{{ path('products') }}">Soldes<a></li>
+                    <li><a href="{{ path('home') }}">Abonnement<a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h1>Contact</h1>
+            <div>
+                <ul>
+                    <li><a href="{{ path('home') }}">Contactez nous<a></li>
+                    <li><a href="{{ path('home') }}">Adresses<a></li>
+                    <li><a href="{{ path('products') }}">Job<a></li>
+                    <li><a href="{{ path('account') }}">Mon compte<a></li>
+                </ul>
+                <ul>
+                    <li><a href="{{ path('register') }}">Créer un compte<a></li>
+                    <li><a href="{{ path('account') }}">Cartes cadeau<a></li>
+                </ul>
+            </div>
+        </section>
+    </nav>-->
 {% endblock %}
