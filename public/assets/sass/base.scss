@@ -25,6 +25,56 @@ body {
     width: 100%;
     background-color: rgb(255, 255, 255);
 }
+.menuOpened {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    z-index: 10;
+    position: relative;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 0px 10%;
+        :nth-child(3) {
+            color: variables.$red;
+        }  
+        li {
+            list-style: none;
+            padding-bottom: 20px;
+            font-family: agenda, sans-serif;
+            font-size: 13px;
+            text-transform: uppercase;
+            margin: 16px 10px 0px 10px;
+            letter-spacing: 2px; 
+        }
+    }
+}
+// .boxHeadScroll {
+//     display: flex;
+//     justify-content: center;
+// }
+// .headerB {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     height: 60px;
+//     width: 75%;
+//     background-color: white;
+//     margin: auto;
+//     padding: 4px 25px 0px 25px;
+//     margin-top: 15px;
+//     position: fixed;
+//     z-index: 10;
+//     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+//     animation: popMenu 1s ease-in-out 1;
+//     @keyframes popMenu {
+//         0% {
+//             opacity: 0;
+//         }
+//     }
+// }
 .logoHead {
     font-family: tuppence, serif;
     font-size: 33px;

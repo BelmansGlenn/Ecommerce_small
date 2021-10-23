@@ -19,3 +19,32 @@ function checkScroll() {
     goBackBtn.style.display = "inline-grid"
   }
 }
+
+// MENU 
+menuBtn = document.querySelector(".menuOpen")
+menuOpen = document.querySelector(".menuOpened")
+
+function menuClick() {
+  menuBtn.addEventListener('click', (el) =>{ 
+      menuOpen.classList.add('disBlock')
+      menuBtn.addEventListener('click', (el) =>{ 
+        menuOpen.classList.remove("disBlock");
+        menuClick()
+      })
+  })
+}
+menuClick()
+
+// const menuNatif = document.querySelector(".headerB")
+
+// function menuScroll() {
+//   if (document.body.scrollTop > 50 && document.body.scrollTop < 500) {
+//       if(!menuNatif.is(':visible')) {
+//           menuNatif.fadeIn(); 
+//       }
+//   } else if(menuNatif.is(':visible')) {
+//       menuNatif.fadeOut();
+//   };
+// }
+
+// menuScroll()

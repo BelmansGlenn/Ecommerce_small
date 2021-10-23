@@ -2,6 +2,10 @@
   display: none;
 }
 
+.disBlock {
+  display: block;
+}
+
 .hPromoBox {
   background: #00173ab8;
   width: 100%;
