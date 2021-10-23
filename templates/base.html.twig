@@ -35,10 +35,13 @@
                 {% else %}
                     <a href="{{ path('app_login') }}">Connexion</a>
                 {% endif %}
-                <a href="{{ path('basket') }}"><i class="icHead fas fa-shopping-basket"></i></a>
+                    <a href="{{ path('basket') }}"><i class="icHead fas fa-shopping-basket"></i></a>
                 {% if app.session.get('basket') is null %}
-                {% else %}{{ app.session.get('basket')|reduce((carry, v) => carry + v) }}
-                {% endif %}</a>
+                    {% else %}
+                    <div id="basketInfo">
+                        <p>{{ app.session.get('basket')|reduce((carry, v) => carry + v) }}</p>
+                    </div>
+                {% endif %}
             </section>
         </header>
         <nav class="menuOpened">
