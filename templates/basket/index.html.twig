@@ -5,7 +5,8 @@
 {% block body %}
 {% if basket|length > 0 %}
 <section class="panierMain">
-    <h1>Mon panier</h1>
+    <h1>Votre panier</h1>
+    <h2 class="panierBanner">Il y a actuellemment <span>{{ app.session.get('basket')|reduce((carry, v) => carry + v) }}</span> articles dans votre panier.</h2>
     {% set total = null %}
     {% for product in basket %}
     <span class="deleteProdBasket"><a href="{{ path('delete_from_basket', {'id': product.product.id}) }}"><i class="fas fa-times"></i></a></span>

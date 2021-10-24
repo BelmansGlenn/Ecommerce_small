@@ -14,7 +14,7 @@
   border-radius: 50%;
   font-weight: bold;
   color: #81ffd5;
-  animation: spinZ 5s linear infinite, animSoldes 3s ease-in-out 1;
+  animation: spinZ 20s linear infinite, animSoldes 3s ease-in-out 1;
   text-align: center;
   font-family: masqualero-groove, sans-serif;
   font-weight: 400;
@@ -162,6 +162,10 @@
   font-family: agenda, sans-serif;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+.boxHomeL {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
 .boxHomeR {
@@ -325,10 +329,9 @@
   #homeBanner div h2 {
     font-family: arponasans, sans-serif;
     font-size: 40px;
-    text-transform: uppercase;
     text-align: end;
     margin: 0px 35px 0px 0px;
-    color: white;
+    color: #a995c1;
   }
   #homeBanner div h3 {
     font-family: agenda, sans-serif;
@@ -337,6 +340,7 @@
     text-align: end;
     padding: 0px 0px 0px 58%;
     margin: 10px 35px 0px 0px;
+    opacity: 0.8;
   }
 }
 

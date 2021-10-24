@@ -258,6 +258,22 @@
 @media (min-width:600px) {
     .zoomProduct figure {
         height: 400px;
+        padding: 50px 0px;
+        @keyframes zoomProd {
+            0% {
+                padding: 0px 100px;
+                opacity: 0;
+            }
+            70% {
+                opacity: 1;
+            }
+            100% {
+                padding: 50px 0px;
+            }
+        }
+    }
+    @keyframes zoomProd {
+        
     }
     .zoomProduct {
         section :nth-child(1) {
@@ -267,4 +283,40 @@
             }
         }
     }
- }
+}
+
+@media (min-width:800px) {
+    .shopNav h1 {
+        font-size: 80px;
+        margin: 55px 0px 35px 0px;
+    }
+    .shopMain div {
+        width: 100%;
+    }
+    .shopMain figure {
+        height: 250px;
+        
+    }
+    #prodBox {
+        margin: 10px 7px;
+        width: 230px;
+    }
+    .buyBox {
+        height: 84px;
+    }
+    .shopMain div {
+        width: 100%;
+        height: 100%;
+    }
+    .buyBox h2, .buyBox p, .buyBox a {
+        width: 100%;
+        font-size: 12px;
+    }
+    .showBoxHome h1 {
+        font-size: 62px;
+        margin: 40px 0px;
+    }
+}
+
+
+
