@@ -35,16 +35,3 @@ function menuClick() {
 }
 menuClick()
 
-// const menuNatif = document.querySelector(".headerB")
-
-// function menuScroll() {
-//   if (document.body.scrollTop > 50 && document.body.scrollTop < 500) {
-//       if(!menuNatif.is(':visible')) {
-//           menuNatif.fadeIn(); 
-//       }
-//   } else if(menuNatif.is(':visible')) {
-//       menuNatif.fadeOut();
-//   };
-// }
-
-// menuScroll()

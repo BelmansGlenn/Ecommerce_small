@@ -104,6 +104,15 @@
   margin: auto;
   margin-top: 15px;
 }
+.hPromo a:hover {
+  animation: borderBtn 1s ease-out forwards;
+}
+@keyframes borderBtn {
+  100% {
+    width: 100%;
+    background-color: #bbffe35b;
+  }
+}
 
 .spaceShowB {
   margin-top: 135px;

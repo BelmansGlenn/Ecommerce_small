@@ -102,6 +102,19 @@
     width: 210px;
     margin: auto;
     margin-top: 15px;
+	&:hover {
+		animation: borderBtn 1s ease-out forwards;
+		@keyframes borderBtn {
+			60% {
+			}
+			80% {
+			}
+			100% {
+				width: 100%;
+				background-color: #bbffe35b;
+			}
+		}	
+	}
 }
 .spaceShowB {
     margin-top: 135px;
