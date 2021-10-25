@@ -15,7 +15,7 @@
 	border-radius: 50%;
     font-weight: bold;
     color: variables.$green;
-	animation: spinZ 5s linear infinite, animSoldes 3s ease-in-out 1;
+	animation: spinZ 20s linear infinite, animSoldes 3s ease-in-out 1;
 	text-align: center;
 	font-family: masqualero-groove, sans-serif;
 	font-weight: 400;
@@ -125,7 +125,7 @@
 .showBoxHome figure {
     height: 300px;
     width: 265px;
-    background-color: variables.$greenF;
+	background-color: #BBFFE34F;
     img {
         width: 100%;
         height: 100%;
@@ -154,6 +154,9 @@
     font-family: agenda, sans-serif;
     font-size: 14px;
     text-transform: uppercase;
+}
+.boxHomeL {
+	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 .boxHomeR {
     display: flex;
@@ -294,35 +297,75 @@
 			}
 		}
 		div {
-			padding: 200px 0px;
+			article {
+				display: flex;
+				width: 100%;
+				flex-direction: row-reverse;
+				#bannerBox {
+					background-color: #ffffff0f;
+					border: 1px dotted #dbdbdb;
+					width: 50%;
+					margin: 21% 0% 29% 0%;
+					padding: 35px 20px;
+					border-right: none;
+				}
+			}
 			h1 {
 				font-family: kudryashev-d-contrast, sans-serif;
-				// font-family: arponasans, sans-serif;
 				font-family: quiche-sans, sans-serif;
 				font-family: flower-power, sans-serif;
 				font-size: 120px;
-				// text-transform: uppercase;
-				color: variables.$greenF;
+				color: variables.$green;
 				text-align: center;
-				transform: translate(0px,-55%);
+				transform: translate(0px, 60%);
 				opacity: 0.5;
 			}
 			h2 {
-				font-family: arponasans, sans-serif;
-				font-size: 40px;
+				font-family: calder-dark-outline, sans-serif;
+				font-size: 27px;
 				text-transform: uppercase;
 				text-align: end;
-				margin: 0px 35px 0px 0px;
-				color: white;
+				margin: 0px 0px 18px 0px;
+				color: variables.$greenF;
+				opacity: 0.8;
+
 			}
 			h3 {
 				font-family: agenda, sans-serif;
 				font-size: 14px;
 				color: white;
 				text-align: end;
-				padding: 0px 0px 0px 58%;
-				margin: 10px 35px 0px 0px;
+				opacity: 0.8;
+				padding: 0px 0px 0px 50px;
+				line-height: 20px;
+			}
+			h4 {
+				font-family: calder-dark-outline, sans-serif;
+				font-size: 29px;
+				color: white;
+				text-align: end;
+				opacity: 0.8;
+				margin: 15px 5px 0px 0px;
+				color: variables.$w;
 			}
 		}
+	}
+}
+
+
+
+@media (min-width:1025px) {
+	#homeBanner {
+		background-position: 0% 18%;
+	}
+	.showBoxHome figure {
+		height: 365px;
+		width: 375px;
+	}
+	.boxHome section {
+		padding: 12px 31px;
+	}
+	#styleCatalogue {
+		margin: 22px 15px;
 	}
 }

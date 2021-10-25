@@ -357,3 +357,46 @@
     width: 80% !important;
     margin: 20px 0px;
 }
+
+
+
+
+@media (min-width:800px) {
+    .compteMain {
+        margin: 15px 160px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        h1 {
+            font-size: 48px;
+        }
+    }
+    .compteMain p {
+        font-size: 15px;
+        text-align: center;
+        span {
+            font-size: 15px;
+        }
+    }
+    .changeMdpForm {
+
+        h1 {
+            font-size: 48px;
+        }
+    }
+    .adressMain {
+        margin: 15px 160px;
+        header p {
+            font-size: 15px;
+        }
+        article {
+            margin: 40px 0px;
+        }
+    }
+}
+
+@media (min-width:1025px) { 
+    .adressMain header p {
+        text-align: center;
+    }
+}

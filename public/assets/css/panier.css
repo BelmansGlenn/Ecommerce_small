@@ -182,6 +182,17 @@
   padding: 5px 15px;
 }
 
+.panierBanner {
+  font-family: agenda, sans-serif !important;
+  font-size: 14px !important;
+  margin: 20px 43px !important;
+  text-transform: none !important;
+  text-align: center;
+}
+.panierBanner span {
+  font-weight: 800;
+}
+
 .panierVide {
   width: 100%;
   height: 75vh;
@@ -202,6 +213,50 @@
   border: 1px dotted #707070;
   padding: 5px 15px;
   text-transform: uppercase;
+}
+
+@media (min-width: 800px) {
+  .panierFinal div :nth-child(1) {
+    font-size: 18px;
+  }
+
+  .panierFinal div :nth-child(2) {
+    font-size: 18px;
+  }
+
+  .panierFinal div {
+    justify-content: space-evenly;
+  }
+
+  .panierMain figure {
+    height: 155px;
+  }
+
+  .panierMain section div {
+    margin: 20px 30%;
+  }
+  .panierMain section div p {
+    border-radius: 5%;
+    width: 35px;
+    height: 35px;
+    font-size: 17px;
+  }
+
+  .panierMain h1 {
+    font-size: 68px;
+  }
+  .panierMain h2 {
+    font-size: 32px;
+  }
+
+  .panierBanner {
+    font-size: 15px !important;
+  }
+}
+@media (min-width: 1025px) {
+  .panierMain {
+    margin: 0px 15%;
+  }
 }
 
 /*# sourceMappingURL=panier.css.map */

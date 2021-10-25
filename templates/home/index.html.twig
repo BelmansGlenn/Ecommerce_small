@@ -5,15 +5,13 @@
 {% block body %}
 <div class="noisy">
     <section class= "hPromoBox">
-        <div class="promoAnim">Les soldes d'hivers sont là!</div>
+        <div class="promoAnim">Les soldes d'hivers sont là ! </div>
         <div class="promoAnim2">
             <span>Les soldes d'hivers sont là !</span>
             <span>Les soldes d'hivers sont là !</span>
             <span>Les soldes d'hivers sont là !</span>
             <span>Les soldes d'hivers sont là !</span>
             <span>Les soldes d'hivers sont là !</span>
-            {# <span>Les soldes d'hivers sont là !</span>
-            <span>Les soldes d'hivers sont là !</span> #}
         </div>
         <div class="hPromo">
             <h2>Profitez de 20% sur nos soldes spécial fin d'année.</h2>
@@ -24,8 +22,14 @@
 <figure id="homeBanner">
     <div>
         <h1>Glaira.com</h1>
-        <h2>Notre expertise</h2>
-        <h3>En présentant des meubles à votre image, qui résistent aux modes de vie et au temps qui passe, en mettant à votre disposition des services performants et un réseau de professionnels reconnus, nous instaurons avec vous une relation durable et de confiance. C’est notre état d’esprit et nous le partageons ensemble.</h3>
+        <article>
+            <section></section>
+            <section id="bannerBox">
+                <h2>Notre expertise</h2>
+                <h3>En présentant des meubles à votre image, qui résistent aux modes de vie et au temps qui passe, en mettant à votre disposition des services performants et un réseau de professionnels reconnus, nous instaurons avec vous une relation durable et de confiance.</h3>
+                <h4><a href="{{ path('products') }}">Découvrir</a></h4>
+            </section>
+        </article>
     </div>
 </figure>
 <article class="carrouselBox">
