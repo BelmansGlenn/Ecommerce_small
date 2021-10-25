@@ -373,6 +373,7 @@
     }
     .compteMain p {
         font-size: 15px;
+        text-align: center;
         span {
             font-size: 15px;
         }
@@ -391,5 +392,11 @@
         article {
             margin: 40px 0px;
         }
+    }
+}
+
+@media (min-width:1025px) { 
+    .adressMain header p {
+        text-align: center;
     }
 }

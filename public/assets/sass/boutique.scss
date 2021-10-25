@@ -99,11 +99,12 @@
 }
 #prodBox {
     margin: 10px 2px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 .shopMain div {
     width: 150px;
     margin: 10px 0px;
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;}
+}
 .shopMain figure {
 
     width: 100%;
@@ -320,3 +321,22 @@
 
 
 
+@media (min-width:1025px) {
+    .shopMain {
+        padding: 0px 55px;
+    }
+    .shopNav ul {
+        margin-top: 35px;
+        border-top: 1px dotted black;
+    }
+    #filterBtnCheck {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    #categories {
+        margin: 15px 0px;
+    }
+    #prodBox {
+        margin: 22px 7px;
+    }
+}

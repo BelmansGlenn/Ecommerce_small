@@ -131,7 +131,7 @@
 .showBoxHome figure {
   height: 300px;
   width: 265px;
-  background-color: #BBFFE3;
+  background-color: #BBFFE34F;
 }
 .showBoxHome figure img {
   width: 100%;
@@ -313,34 +313,73 @@
       background-position: 0% 90%;
     }
   }
-  #homeBanner div {
-    padding: 200px 0px;
+  #homeBanner div article {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+  }
+  #homeBanner div article #bannerBox {
+    background-color: #ffffff0f;
+    border: 1px dotted #dbdbdb;
+    width: 50%;
+    margin: 21% 0% 29% 0%;
+    padding: 35px 20px;
+    border-right: none;
   }
   #homeBanner div h1 {
     font-family: kudryashev-d-contrast, sans-serif;
     font-family: quiche-sans, sans-serif;
     font-family: flower-power, sans-serif;
     font-size: 120px;
-    color: #BBFFE3;
+    color: #81ffd5;
     text-align: center;
-    transform: translate(0px, -55%);
+    transform: translate(0px, 60%);
     opacity: 0.5;
   }
   #homeBanner div h2 {
-    font-family: arponasans, sans-serif;
-    font-size: 40px;
+    font-family: calder-dark-outline, sans-serif;
+    font-size: 27px;
+    text-transform: uppercase;
     text-align: end;
-    margin: 0px 35px 0px 0px;
-    color: #a995c1;
+    margin: 0px 0px 18px 0px;
+    color: #BBFFE3;
+    opacity: 0.8;
   }
   #homeBanner div h3 {
     font-family: agenda, sans-serif;
     font-size: 14px;
     color: white;
     text-align: end;
-    padding: 0px 0px 0px 58%;
-    margin: 10px 35px 0px 0px;
     opacity: 0.8;
+    padding: 0px 0px 0px 50px;
+    line-height: 20px;
+  }
+  #homeBanner div h4 {
+    font-family: calder-dark-outline, sans-serif;
+    font-size: 29px;
+    color: white;
+    text-align: end;
+    opacity: 0.8;
+    margin: 15px 5px 0px 0px;
+    color: #ffffff;
+  }
+}
+@media (min-width: 1025px) {
+  #homeBanner {
+    background-position: 0% 18%;
+  }
+
+  .showBoxHome figure {
+    height: 365px;
+    width: 375px;
+  }
+
+  .boxHome section {
+    padding: 12px 31px;
+  }
+
+  #styleCatalogue {
+    margin: 22px 15px;
   }
 }
 

@@ -68,7 +68,7 @@ body {
   width: 14px;
   height: 14px;
   position: absolute;
-  transform: translate(79px, -172%);
+  transform: translate(58px, -175%);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -320,6 +320,25 @@ body {
 
   #espaceClientRes {
     border-right: 1px dotted black;
+  }
+}
+@media (min-width: 1025px) {
+  .headerB {
+    padding: 10px 60px 0px 60px;
+    height: 65px;
+  }
+
+  .logoHead {
+    margin-bottom: 10px;
+  }
+
+  .shopMain {
+    padding: 0px 55px;
+  }
+
+  .shopNav ul {
+    margin-top: 35px;
+    border-top: 1px dotted black;
   }
 }
 
