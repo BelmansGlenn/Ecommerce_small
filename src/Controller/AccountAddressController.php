@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Classes\Basket;
 use App\Entity\Address;
 use App\Form\AddressType;
 use App\Repository\AddressRepository;
@@ -39,7 +40,7 @@ class AccountAddressController extends AbstractController
     /**
      * @Route("/mon-compte/adresses/ajouter", name="account_address_add")
      */
-    public function add(Request $request): Response
+    public function add(Basket $basket,Request $request): Response
     {
         $address = new Address();
 
@@ -52,7 +53,14 @@ class AccountAddressController extends AbstractController
             $address->setUser($this->getUser());
             $this->entityManager->persist($address);
             $this->entityManager->flush();
-            return $this->redirectToRoute('account_address');
+            if ($basket->get())
+            {
+                return $this->redirectToRoute('order');
+            }else{
+                return $this->redirectToRoute('account_address');
+            }
+
+
         }
 
         return $this->render('account/address_form.html.twig', [
