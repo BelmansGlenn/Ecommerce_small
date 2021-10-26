@@ -324,13 +324,11 @@
 				}
 			}
 			h1 {
-				font-family: kudryashev-d-contrast, sans-serif;
-				font-family: quiche-sans, sans-serif;
 				font-family: flower-power, sans-serif;
 				font-size: 120px;
 				color: variables.$green;
 				text-align: center;
-				transform: translate(0px, 60%);
+				transform: translate(0px, 100%);
 				opacity: 0.5;
 			}
 			h2 {
@@ -373,6 +371,10 @@
 	}
 	#homeBanner {
 		background-position: 0% 18%;
+		div h1 {
+			font-size: 145px;
+			transform: translate(0px, 75%);
+		}
 	}
 	.showBoxHome figure {
 		height: 365px;
