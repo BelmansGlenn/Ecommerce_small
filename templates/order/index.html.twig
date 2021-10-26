@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Validation{% endblock %}
+
+{% block body %}
+    <h2>Choisir adresse de livraison</h2>
+    {% set formHtml %}
+        {{ form_start(ValidationForm, {action:path('order_recap')}) }}
+        {{ form_row(ValidationForm.addresses) }}
+        <a href="{{ path('account_address_add') }}"><h3>Ajouter une autre adresse de livraison</h3></a>
+        {{ form_row(ValidationForm.carriers) }}
+        {{ form_end(ValidationForm) }}
+    {% endset %}
+<div>{{ formHtml|replace({'[br]': '<br>'})|raw }}</div>
+
+    <h2>Ma commande:</h2>
+    {% for product in basket %}
+        <img src="/assets/img/products/{{ product.product.illustration }}" height="50px"></img>
+        {{ product.product.name }}
+        X {{ product.quantity }}
+        <br>
+    {% endfor %}
+
+{% endblock %}
+{% block footer %}
+{% endblock %}

@@ -68,6 +68,11 @@ class Address
      */
     private $phone;
 
+    public function __toString()
+    {
+        return $this->getName().'[br]'. $this->getAddress().'[br]'.$this->getPostal().'[br]'
+            .$this->getCity().'[br]'.$this->getCountry().'[br]'.$this->getPhone().'[br]';
+    }
     public function getId(): ?int
     {
         return $this->id;
