@@ -1,0 +1,120 @@
+.commandebox {
+  background-color: white;
+  width: 100%;
+  padding: 25px 0px;
+  margin: 12px 0px 0px 0px;
+}
+.commandebox h2 {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0px 0px 0px;
+  margin-bottom: 10px;
+}
+.commandebox section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.commandebox article {
+  margin: 10px 0px 10px 0px;
+}
+.commandebox article footer h3 {
+  font-family: arponasans, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.commandebox article footer h4 {
+  font-family: agenda, sans-serif;
+  font-size: 14px;
+}
+
+.adressLivr {
+  width: 100%;
+}
+.adressLivr h1 {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.adressLivr h2 {
+  font-family: agenda, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+.adresseUser {
+  background-color: #e8e8e8;
+  margin: 30px 0px;
+  padding: 30px 0px;
+}
+.adresseUser #order_addresses {
+  font-family: arponasans, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.adresseUser #order_addresses label {
+  border: 1px dotted black;
+  padding: 10px 0px;
+  margin: 0px 50px;
+  background-color: #6eff6117;
+}
+.adresseUser #order_addresses input {
+  margin: 10px 0px 10px 0px;
+}
+
+.livraisonUser h1 {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.livraisonUser h2 {
+  font-family: agenda, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+.transport {
+  background-color: #e8e8e8;
+  margin: 30px 0px;
+  padding: 30px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.transport label {
+  font-family: agenda, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+#order-carriers :nth-child(1) {
+  background-color: red;
+}
+#order-carriers :nth-child(2) {
+  background-color: blue;
+}
+#order-carriers :nth-child(3) {
+  background-color: #0b0b25;
+}
+
+#order_submit {
+  font-family: arponasans, sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  margin: 30px 0px 10px 0px;
+}
+
+/*# sourceMappingURL=cmd-process.css.map */
