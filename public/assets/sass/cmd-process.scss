@@ -1,0 +1,120 @@
+@use 'variables.scss';
+.commandebox {
+    background-color: white;
+    width: 100%;
+    padding: 25px 0px;
+    margin: 12px 0px 0px 0px;
+    h2 {
+        font-family: kudryashev-d-contrast, sans-serif;
+        font-size: 13px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px 0px 0px 0px;
+        margin-bottom: 10px;
+    }
+    section {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    article {
+        margin: 10px 0px 10px 0px;
+        footer {
+            h3 {
+                font-family: arponasans, sans-serif;
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+            h4 {
+                font-family: agenda, sans-serif;
+                font-size: 14px;
+                // text-align: center;
+            }
+        }
+    }
+}
+.adressLivr {
+    width: 100%;
+    h1 {
+        font-family: kudryashev-d-contrast, sans-serif;
+        font-size: 28px;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-family: agenda, sans-serif;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+.adresseUser{
+    background-color: #e8e8e8;
+    margin: 30px 0px;
+    padding: 30px 0px;
+    #order_addresses {
+        font-family: arponasans, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        label {
+            border: 1px dotted black;
+            padding: 10px 0px;
+            margin: 0px 50px;
+            background-color: #6eff6117;
+        }
+        input {
+            margin: 10px 0px 10px 0px;
+        }
+    }
+}
+.livraisonUser {
+    h1 {
+        font-family: kudryashev-d-contrast, sans-serif;
+        font-size: 28px;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-family: agenda, sans-serif;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+.transport {
+    background-color: #e8e8e8;
+    margin: 30px 0px;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    label {
+        font-family: agenda, sans-serif;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+#order-carriers {
+    :nth-child(1) {
+        background-color: red;
+    }
+    :nth-child(2) {
+        background-color: blue
+    }
+    :nth-child(3) {
+        background-color: rgb(11, 11, 37)
+    }
+}
+#order_submit {
+    font-family: arponasans, sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 30px 0px 10px 0px;
+}
