@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Validation{% endblock %}
-
+{% block javascripts %}
+    <script src="https://js.stripe.com/v3/"></script>
+{% endblock %}
 {% block body %}
     <h1>Recapitulatif</h1>
     <p>Verifier vos informations avant de payer.</p>
@@ -28,7 +30,7 @@
     <h2>Sous Total: {{ ((total)/100)|number_format(2, ',', '.') }} €</h2>
     <h2>Livraison: {{ (carrier.price)|number_format(2, ',', '.') }} €</h2>
     <h1>Total: {{ ((total/100) + carrier.price)|number_format(2, ',', '.') }} €</h1>
-<a href="">Payer {{ ((total/100) + carrier.price)|number_format(2, ',', '.') }} €</a>
+<a href="{{ stripe_checkout }}">Payer {{ ((total/100) + carrier.price)|number_format(2, ',', '.') }} €</a>
 {% endblock %}
 {% block footer %}
 {% endblock %}
