@@ -3,13 +3,12 @@
     Erreur de Paiement
 {% endblock %}
 {% block body %}
-    <h2>Erreur de Paiement</h2>
-    <p>Bonjour {{ failedOrder.user.firstname }} {{ failedOrder.user.lastname }}</p>
-    <p>Une erreur est survenue lors du paiement de la commande n°{{ failedOrder.reference }}.</p>
-
-
-    <p>Un email vous a été envoyé à l'adresse: {{ failedOrder.user.email }}</p>
-
-
-    <a href="{{ path('order') }}">Réessayer le paiement</a>
+<section class="errorSuccesPay">
+    <h1>Erreur de Paiement</h1>
+    <div class="errorsBox">
+        <p>Bonjour <span>{{ failedOrder.user.firstname }} {{ failedOrder.user.lastname }}</span></p>
+        <p>Une erreur est survenue lors du paiement de la commande n°{{ failedOrder.reference }}.</p>
+        <p>Un email vous a été envoyé à l'adresse: <br>{{ failedOrder.user.email }}</p>
+    </div>
+    <button><a href="{{ path('order') }}">Réessayer le paiement</a></button>
 {% endblock %}

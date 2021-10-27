@@ -63,7 +63,7 @@
             border: 1px dotted black;
             padding: 10px 0px;
             margin: 0px 50px;
-            background-color: #6eff6117;
+            background-color: #BBFFE370;
         }
         input {
             margin: 10px 0px 10px 0px;
@@ -97,17 +97,6 @@
         text-align: center;
     }
 }
-#order-carriers {
-    :nth-child(1) {
-        background-color: red;
-    }
-    :nth-child(2) {
-        background-color: blue
-    }
-    :nth-child(3) {
-        background-color: rgb(11, 11, 37)
-    }
-}
 #order_submit {
     font-family: arponasans, sans-serif;
     text-transform: uppercase;
@@ -118,3 +107,13 @@
     text-align: center;
     margin: 30px 0px 10px 0px;
 }
+
+@media (min-width:800px) { 
+    .adresseUser #order_addresses {
+        padding: 0px 205px;
+        label {
+            padding: 15px 0px;
+        }
+    }
+}
+

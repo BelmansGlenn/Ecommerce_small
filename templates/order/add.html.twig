@@ -5,32 +5,53 @@
     <script src="https://js.stripe.com/v3/"></script>
 {% endblock %}
 {% block body %}
-    <h1>Recapitulatif</h1>
-    <p>Verifier vos informations avant de payer.</p>
-
-    <h2>Mon adresse:</h2>
-    <pre>{{ delivery|raw }}</pre>
-
-    <h2>Mon transporteur:</h2>
-    <p>{{ carrier.name }}</p>
-    <p>{{ carrier.description|raw }}</p>
-    <p>{{ (carrier.price)|number_format(2, ',', '.') }} €</p>
-
-    <h2>Ma commande:</h2>
-    {% set total = null %}
-    {% for product in basket %}
-        <img src="/assets/img/products/{{ product.product.illustration }}" height="50px"></img>
-        {{ product.product.name }}
-        X {{ product.quantity }}
-        <br>
-        <p>{{ ((product.product.price * product.quantity)/100)|number_format(2, ',', '.') }} €</p>
-        {% set total = total + (product.product.price * product.quantity) %}
-    {% endfor %}
-
-    <h2>Sous Total: {{ ((total)/100)|number_format(2, ',', '.') }} €</h2>
-    <h2>Livraison: {{ (carrier.price)|number_format(2, ',', '.') }} €</h2>
-    <h1>Total: {{ ((total/100) + carrier.price)|number_format(2, ',', '.') }} €</h1>
-<a href="{{ stripe_checkout }}">Payer {{ ((total/100) + carrier.price)|number_format(2, ',', '.') }} €</a>
+<section class="finalPay">
+    <header>
+        <h1>Recapitulatif</h1>
+        <h2>Verifier vos informations avant de payer.</h2>
+    </header>
+    <section>
+        <h2>Votre adresse :</h2>
+        <pre>{{ delivery|raw }}</pre>
+        <h2>Service de livraison :</h2>
+        <div>
+            <p>{{ carrier.name }}</p>
+            <p>{{ carrier.description|raw }}</p>
+            <p>{{ (carrier.price)|number_format(2, ',', '.') }} €</p>
+        </div>
+    </section>
+    <figure>
+    <h2>Votre commande :</h2>
+        <section class="commandebox">
+        {% set total = null %}
+            <section>
+            {% for product in basket %}
+                <article>
+                    <img src="/assets/img/products/{{ product.product.illustration }}" height="50px"></img>
+                        <footer>
+                            <h3>{{ product.product.name }}</h3>
+                            <h4>{{ product.quantity }}</h4>
+                            <h4>{{ ((product.product.price * product.quantity)/100)|number_format(2, ',', '.') }} €</h4>
+                            {% set total = total + (product.product.price * product.quantity) %}
+                    </footer>
+                </article>
+            {% endfor %}
+            </section>
+        </section>
+    </figure>
+    <footer class="footerPay">
+        <h1>
+            <span>Sous Total :</span>{{ ((total)/100)|number_format(2, ',', '.') }} €</span>
+        </h1>
+        <h2>
+            <span>Livraison :</span>{{ (carrier.price)|number_format(2, ',', '.') }} €</span>
+        </h2>
+        <h3>
+            <span>Total :</span>{{ ((total/100) + carrier.price)|number_format(2, ',', '.') }} €</span>
+        </h3>
+        <button><a href="{{ stripe_checkout }}">Payer {{ ((total/100) + carrier.price)|number_format(2, ',', '.') }} €</a></button>
+    </footer>
+</section>
 {% endblock %}
 {% block footer %}
 {% endblock %}
