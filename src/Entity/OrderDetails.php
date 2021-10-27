@@ -43,6 +43,11 @@ class OrderDetails
      */
     private $total;
 
+    public function __toString()
+    {
+        return $this->product.' X '.$this->quantity;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

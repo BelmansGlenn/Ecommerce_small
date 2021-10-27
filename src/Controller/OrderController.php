@@ -7,6 +7,8 @@ use App\Entity\Order;
 use App\Entity\OrderDetails;
 use App\Form\OrderType;
 use Doctrine\ORM\EntityManagerInterface;
+use Stripe\Checkout\Session;
+use Stripe\Stripe;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -79,6 +81,8 @@ class OrderController extends AbstractController
             $delivery_content .= $delivery->getPhone().'<br>';
             //Order
             $order = new Order();
+            $reference = $date->format('dmY').'-'.uniqid();
+            $order->setReference($reference);
             $order->setUser($this->getUser());
             $order->setCreatedAt($date);
             $order->setCarrierName($carriers->getName());
@@ -88,6 +92,8 @@ class OrderController extends AbstractController
 
             $this->entityManager->persist($order);
 
+            $productsStripe = [];
+            $YOUR_DOMAIN = 'http://127.0.0.1:8000';
 
             foreach ($basket->getFull() as $product)
             {
@@ -98,13 +104,58 @@ class OrderController extends AbstractController
                 $orderDetails->setPrice($product['product']->getPrice());
                 $orderDetails->setTotal($product['product']->getPrice() * $product['quantity']);
                 $this->entityManager->persist($orderDetails);
+
+                $productsStripe[] = [
+                    'price_data' => [
+                        'currency' => 'eur',
+                        'unit_amount' => $product['product']->getPrice(),
+                        'product_data' => [
+                            'name' => $product['product']->getName(),
+                            'images' => [$YOUR_DOMAIN.'/assets/img/products/'.$product['product']->getIllustration()]
+                        ]
+                    ],
+                    'quantity' => $product['quantity'],
+                ];
+
             }
+            $productsStripe[] = [
+                'price_data' => [
+                    'currency' => 'eur',
+                    'unit_amount' => ($carriers->getPrice())*100,
+                    'product_data' => [
+                        'name' => $carriers->getName(),
+                    ]
+                ],
+                'quantity' => 1,
+            ];
+
+            //$this->entityManager->flush();
+
+            Stripe::setApiKey('sk_test_51JooPjHLeiEOI7bdV7JLIEojGYOLCEGdsEKz3w6vWM65xSOYzvbVIdEJbk2MRvOY433qS0Rd94wEyqrGmoebHNv600dpntcIaR');
+
+
+            $checkout_session = Session::create([
+                'customer_email' => $this->getUser()->getEmail(),
+                'line_items' => [[
+                    $productsStripe
+                ]],
+                'payment_method_types' => [
+                    'card',
+                    'bancontact',
+                ],
+                'mode' => 'payment',
+                'success_url' => $YOUR_DOMAIN . '/paiement-accepte/{CHECKOUT_SESSION_ID}',
+                'cancel_url' => $YOUR_DOMAIN . '/paiement-refuse/{CHECKOUT_SESSION_ID}',
+            ]);
+
+            $order->setStripeSessionId($checkout_session->id);
             $this->entityManager->flush();
 
             return $this->render('order/add.html.twig', [
                 'basket' => $basket->getFull(),
                 'carrier' => $carriers,
-                'delivery' => $delivery_content
+                'delivery' => $delivery_content,
+                'stripe_checkout' => $checkout_session->url
             ]);
         }
 
