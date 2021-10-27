@@ -7,6 +7,7 @@
         <p>Bienvenue dans vote espace personnel <span>{{ app.user.firstname }}</span>, ici vous pourrez modifier les informations liées à votre compte.</p>
         <button><a href="{{ path('account_password') }}">Modifier mon mot de passe</a></button>
         <button><a href="{{ path('account_address') }}">Gerer mes adresses</a></button>
+        <button><a href="{{ path('account_order') }}">Mes commandes</a></button>
     </section>
     <button class="decoBtn"><a href="{{ path('app_logout') }}">Deconnexion</a></button>
 {% endblock %}
