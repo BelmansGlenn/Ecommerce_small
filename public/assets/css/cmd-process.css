@@ -63,7 +63,7 @@
   border: 1px dotted black;
   padding: 10px 0px;
   margin: 0px 50px;
-  background-color: #6eff6117;
+  background-color: #BBFFE370;
 }
 .adresseUser #order_addresses input {
   margin: 10px 0px 10px 0px;
@@ -89,21 +89,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
 }
 .transport label {
   font-family: agenda, sans-serif;
   font-size: 14px;
   text-align: center;
-}
-
-#order-carriers :nth-child(1) {
-  background-color: red;
-}
-#order-carriers :nth-child(2) {
-  background-color: blue;
-}
-#order-carriers :nth-child(3) {
-  background-color: #0b0b25;
 }
 
 #order_submit {
@@ -115,6 +106,15 @@
   padding: 10px 20px;
   text-align: center;
   margin: 30px 0px 10px 0px;
+}
+
+@media (min-width: 800px) {
+  .adresseUser #order_addresses {
+    padding: 0px 205px;
+  }
+  .adresseUser #order_addresses label {
+    padding: 15px 0px;
+  }
 }
 
 /*# sourceMappingURL=cmd-process.css.map */

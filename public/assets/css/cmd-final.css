@@ -1,0 +1,138 @@
+.finalPay header h1 {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.finalPay header h2 {
+  font-family: agenda, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+.finalPay section h2 {
+  margin-top: 40px;
+  margin: 40px 0px 20px 0px;
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 22px;
+  text-align: center;
+}
+.finalPay section pre {
+  font-size: 14px;
+  text-align: center;
+  border: 1px dotted black;
+  padding: 10px 0px;
+  margin: 0px 50px;
+  background-color: #BBFFE370;
+}
+.finalPay section div :nth-child(1) {
+  font-family: calder-dark-outline, sans-serif;
+}
+.finalPay section div :nth-child(3) {
+  border-bottom: 1px dotted black;
+}
+.finalPay section div p {
+  font-family: agenda, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  border: 1px dotted black;
+  border-bottom: none;
+  padding: 10px 20px;
+  margin: 0px 50px;
+  background-color: #CECECE70;
+}
+.finalPay figure h2 {
+  margin: 40px 0px 20px 0px;
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 22px;
+  text-align: center;
+}
+.finalPay .footerPay {
+  background: white;
+  margin: 40px 0px 0px 0px;
+  padding: 35px 20px;
+  position: absolute;
+  width: 100%;
+}
+.finalPay .footerPay h1, .finalPay .footerPay h2 {
+  font-family: agenda, sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+.finalPay .footerPay h3 {
+  font-family: arponasans, sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+.finalPay .footerPay button {
+  width: 70%;
+  color: #000000;
+  background-color: #BBFFE3;
+  font-family: arponasans, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin: auto;
+  border: 1px dotted #000;
+  margin-top: 35px;
+  padding: 10px 0px;
+  border-radius: 5px;
+}
+
+.errorSuccesPay h1 {
+  font-family: kudryashev-d-contrast, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.errorSuccesPay .errorsBox {
+  font-family: agenda, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  border: 1px dotted black;
+  padding: 10px 20px;
+  margin: 0px 50px;
+  background-color: #f5949430;
+}
+.errorSuccesPay .errorsBox p span {
+  text-transform: uppercase;
+  color: #707070;
+  font-size: 12px;
+  font-weight: 800;
+}
+.errorSuccesPay button {
+  width: 70%;
+  color: #dfdfdf;
+  background-color: #353535;
+  font-family: arponasans, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin: auto;
+  border: 1px dotted #000;
+  margin-top: 35px;
+  padding: 10px 0px;
+  border-radius: 5px;
+}
+
+.successBox {
+  background-color: #94f5ac30 !important;
+}
+
+@media (min-width: 800px) {
+  .errorSuccesPay .errorsBox {
+    margin: 0px 15%;
+  }
+
+  .errorSuccesPay button {
+    width: 35%;
+  }
+}
+
+/*# sourceMappingURL=cmd-final.css.map */
