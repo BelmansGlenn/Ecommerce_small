@@ -6,7 +6,7 @@
 <section class="errorSuccesPay">
     <h1>Confirmation de commande</h1>
     <div class="errorsBox successBox">
-        <p>Bonjour <span>{{ failedOrder.user.firstname }} {{ failedOrder.user.lastname }}</span></p>
+        <p>Bonjour <span>{{ orderValidated.user.firstname }} {{ orderValidated.user.lastname }}</span></p>
         <p>Nous vous remercions pour votre commande n°{{ orderValidated.reference }}.</p>
         <p>Un email vous a été envoyé à l'adresse: <br>{{ orderValidated.user.email }}</p>
     </div>
