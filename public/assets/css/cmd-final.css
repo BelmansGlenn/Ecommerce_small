@@ -24,6 +24,7 @@
   padding: 10px 0px;
   margin: 0px 50px;
   background-color: #BBFFE370;
+  font-family: prestige-elite-std, monospace;
 }
 .finalPay section div :nth-child(1) {
   font-family: calder-dark-outline, sans-serif;
@@ -125,6 +126,11 @@
   background-color: #94f5ac30 !important;
 }
 
+@media (min-width: 800px) {
+  .finalPay .footerPay {
+    padding: 35px 15%;
+  }
+}
 @media (min-width: 800px) {
   .errorSuccesPay .errorsBox {
     margin: 0px 15%;

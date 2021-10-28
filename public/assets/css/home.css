@@ -140,7 +140,7 @@
 .showBoxHome figure {
   height: 300px;
   width: 265px;
-  background-color: #BBFFE34F;
+  background-color: #000000;
 }
 .showBoxHome figure img {
   width: 100%;
@@ -151,6 +151,9 @@
 @keyframes popImg {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
 

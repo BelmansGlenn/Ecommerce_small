@@ -9,10 +9,12 @@
 
 <section class="shopNav">
     <h1>Notre collection</h1>
-    <div class="shopNavLiHack">
+    <div class="shopNavLiHack boxBtnShop">
         <button id="filterBtn">filtrer</button>
-        <button id="sortBtn">trier</button>
-        <ol id="sortList">
+        <button id="sortBtn"><i class="fas fa-sort"></i></button>
+    </div>
+    <nav id="sortList">
+        <ol>
             <li>Nouveautés</li>
             <li>A - Z</li>
             <li>Z - A</li>
@@ -20,7 +22,7 @@
             <li>Prix décroissant</li> 
             <li>Disponible</li> 
         </ol> 
-    </div>
+    </nav>
     <nav id="filterList">
         <ul>
             {{ form_start(searchForm) }}
