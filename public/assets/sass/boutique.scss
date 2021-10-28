@@ -19,7 +19,7 @@
     font-size: 14px;
     text-transform: uppercase;
     border: 1px solid black;
-    padding: 9px 20px;
+    padding: 7px 13px;
     background-color: variables.$w;
 }
 #filterList {
@@ -52,7 +52,7 @@
 }
 .shopNav ul {
     margin-top: 20px;
-    border-top: 1px solid black;
+    border-top: 1px dotted black;
 }
 .shopNavLiHack li {
     font-family: agenda, sans-serif;
@@ -69,7 +69,7 @@
     text-align: center;
     list-style: none;
     padding: 9px 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: #E3E3E3C4;
 }
 .paddFilter {
     padding: 30px 40px;
@@ -77,8 +77,35 @@
 .filterDiv {
     display: flex;
 }
+.boxBtnShop {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 0px 10% !important;
+    button {
+            font-size: 14px;
+            border: 1px dotted black;
+            padding: 5px 10px;
+            border-radius: 50%;
+            background-color: variables.$greenF;
+            font-family: agenda, sans-serif;
+            text-transform: none !important;
+        
+    }
+}
 #sortList {
+    margin-top: 20px;
     display: none;
+    font-family: agenda, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-top: 1px dotted black;
+    text-align: center;
+    li {
+        list-style: none;
+        border-bottom: 1px dotted black;
+        line-height: 29px;
+        background-color: #E3E3E3C4;
+    }
 }
 #filterBtnCheck {
     font-size: 11px;
@@ -88,6 +115,13 @@
     border: 1px dotted;
     background: none;
 }
+#filterBtn {
+    font-family: calder-dark-outline, sans-serif;
+    border: none;
+    background: #ececec;
+    border-radius: 0px;
+}
+
 // DISPLAY SHOP
 .shopMain {
     width: 100%;
@@ -260,9 +294,12 @@
     .zoomProduct figure {
         height: 400px;
         padding: 50px 0px;
-        @keyframes zoomProd {
+        animation: none;
+        animation: zoomProds 1s ease 1;
+        }
+        @keyframes zoomProds {
             0% {
-                padding: 0px 100px;
+                padding: 0px 130px;
                 opacity: 0;
             }
             70% {
@@ -272,10 +309,7 @@
                 padding: 50px 0px;
             }
         }
-    }
-    @keyframes zoomProd {
-        
-    }
+    
     .zoomProduct {
         section :nth-child(1) {
             flex-direction: row;
@@ -296,7 +330,6 @@
     }
     .shopMain figure {
         height: 250px;
-        
     }
     #prodBox {
         margin: 10px 7px;
@@ -338,5 +371,6 @@
     }
     #prodBox {
         margin: 22px 7px;
+        width: 285px;
     }
 }
