@@ -32,7 +32,6 @@ class HomeController extends AbstractController
     {
         $filterCategory = $this->entityManager->getRepository(Category::class)->findAll();
 
-
         return $this->render('home/index.html.twig', [
             'categories' => $filterCategory
         ]);
