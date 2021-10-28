@@ -4,33 +4,42 @@
 {% block title %}Adresses{% endblock %}
 
 {% block body %}
-    <section class="adressMain">
-        {% if ordersSuccess|length == 0 %}
-            <p class="errorMsg">Vous n'avez pas encore passé de commande.</p>
-            <p>Il est encore temps de réparer tout ça <a href="{{ path('products') }}">SHOP NOW</a></p>
-        {% else %}
+
+    {% if ordersSuccess|length == 0 %}
+        <section class="cmd-acc-no">
+            <h1 class="errorMsg">Vous n'avez pas encore passé de commande.</h1>
+            <p>Il est encore temps de réparer tout ça.</p>
+            <button><a href="{{ path('products') }}">SHOP NOW</a></button>
+        </section>
+    {% else %}
+        <section class="cmd-acc-box">
             <header>
                 <h1>Mes commandes</h1>
                 <p>Bonjour <span>{{ app.user.firstname }}</span>,<br> C'est dans cet espace que vous allez avoir accès à toutes vos commandes.</p>
             </header>
-            {% for order in ordersSuccess %}
-                <article>
-                    <div>
-                        <h1>Commande<br>n°<span>{{ order.reference }}</span></h1>
-                        <p>Passée le: {{ order.createdAt|date("d/m/Y") }}"</p>
-                        <p>Livrée par: {{ order.carrierName }}</p>
-                    </div>
-                    <section>
-                        {% for details in order.orderDetails %}
-                            <p><img src="/assets/img/products/{{ details.illustration }}" height="50px"> {{ details.product }}</p>
-                        <p>{{ details.quantity }}</p>
-                        {% endfor %}
-                        <p>{{ (order.carrierPrice + (order.getTotal()/100))|number_format(2, ',', '.')}}€</p>
-                    </section>
-                </article>
-            {% endfor %}
-             {% endif %}
-    </section>
+            <section class="cmd-display">
+                {% for order in ordersSuccess %}
+                    <article>
+                        <div>
+                            <h1>Commande<br>n°<span>{{ order.reference }}</span></h1>
+                            <p>Passée le : {{ order.createdAt|date("d/m/Y") }}</p>
+                            <p>Livrée par : {{ order.carrierName }}</p>
+                        </div>
+                        <section>
+                            {% for details in order.orderDetails %}
+                            <figure>
+                                <div><img src="/assets/img/products/{{ details.illustration }}" height="50px"></div>
+                                <div><h1>{{ details.product }}</h1></div>
+                                <div><p>{{ details.quantity }}</p></div>
+                            </figure>
+                            {% endfor %}
+                            <h2>{{ (order.carrierPrice + (order.getTotal()/100))|number_format(2, ',', '.')}}€</h2>
+                        </section>
+                    </article>
+                {% endfor %}
+                {% endif %}
+            </section>
+        </section>
 
 
 {% endblock %}
