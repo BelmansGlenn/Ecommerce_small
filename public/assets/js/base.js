@@ -45,15 +45,11 @@ function cursorPos(event) {
   point.style.transform = 'translate3d(' + (pageX - 1) + 'px ,' + (pageY -1) + 'px, 0)';;
 }
 
-
-// Take activies input end
-// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-// CURSOR 
 const cursor = document.querySelector('#cursor');
-// const point = document.querySelector('.cursor--point');
+
 let mouse = { x: 300, y: 300 };
 let pos = { x: 0, y: 0 };
-const speed = 0.1; // between 0 and 1
+const speed = 0.1; 
 const updatePosition = () => {
   pos.x += (mouse.x - pos.x) * speed;
   pos.y += (mouse.y - pos.y) * speed;
@@ -69,4 +65,3 @@ function loop() {
   requestAnimationFrame(loop);
 }
 requestAnimationFrame(loop);
-// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

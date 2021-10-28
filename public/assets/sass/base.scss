@@ -307,8 +307,6 @@ body {
             position: fixed;
             left: 0;
             top: 0;
-            pointer-events: none;
-            will-change: transform;
         }
         #cursor .cursor--inner {
           width: 5vw;
@@ -316,7 +314,6 @@ body {
           border-radius: 50%;
           transform: translate(-50%, -50%);
           background-color: #BBFFE380;
-          display:  sans-serif;
         }
       }
       .cursor--point {
