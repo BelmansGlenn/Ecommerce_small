@@ -3,6 +3,9 @@
 {% block title %}Hello RegisterController!{% endblock %}
 
 {% block body %}
+    {% if notification %}
+        <div>{{ notification }}</div>
+    {% endif %}
     {{ form_start(registerForm, {'attr':{'class':'insForm'}}) }}
         <h1>Inscription</h1> 
         {{ form_row(registerForm.firstname) }}

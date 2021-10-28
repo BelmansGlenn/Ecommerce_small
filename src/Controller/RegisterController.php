@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Classes\Mail;
 use App\Entity\User;
 use App\Form\RegisterType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -29,6 +30,7 @@ class RegisterController extends AbstractController
      */
     public function index(Request $request, UserPasswordHasherInterface $passwordHasher): Response
     {
+        $notification = null;
         $user = new User();
         $registerForm = $this->createForm(RegisterType::class, $user);
 
@@ -37,16 +39,37 @@ class RegisterController extends AbstractController
         if($registerForm->isSubmitted() && $registerForm->isValid())
         {
             $user = $registerForm->getData();
-            $password = $passwordHasher->hashPassword($user,$user->getPassword());
-            $user->setPassword($password);
-            $this->entityManager->persist($user);
-            $this->entityManager->flush();
-            $notification = "Votre inscription a été validée.";
-            return $this->redirectToRoute('app_login');
+
+            $same_email = $this->entityManager->getRepository(User::class)->findOneByEmail($user->getEmail());
+
+            if(!$same_email)
+            {
+                $password = $passwordHasher->hashPassword($user,$user->getPassword());
+                $user->setPassword($password);
+                $user->setConfirmationToken(str_replace('/', '', password_hash(uniqid('token_'), PASSWORD_BCRYPT)));
+                $this->entityManager->persist($user);
+                $this->entityManager->flush();
+                $mail = new Mail();
+                $content = 'Bonjour '.$user->getFirstname().',<br/>Nous sommes heureux de vous compter parmis nous.<br/>
+                    Pour commencer, merci de vérifier votre adresse email.<br/><br/><br/>';
+                $mail->send($user->getEmail(),
+                    $user->getFullname(),
+                    'Bienvenue sur Glaira',
+                    'Vérification du compte',
+                    $content,
+                    'confirm/'.urlencode($user->getConfirmationToken()),
+                    'Vérifier'
+                );
+                $notification = "Un email vous a été envoyé pour vérifier votre compte.";
+            }else{
+                $notification = "Cet email a déjà été utilisé.";
+            }
+
         }
 
         return $this->render('register/index.html.twig', [
-            'registerForm' => $registerForm->createView()
+            'registerForm' => $registerForm->createView(),
+            'notification' => $notification
         ]);
     }
 }

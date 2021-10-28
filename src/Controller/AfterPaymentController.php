@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Classes\Basket;
+use App\Classes\Mail;
 use App\Entity\Order;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -37,6 +38,8 @@ class AfterPaymentController extends AbstractController
             $basket->remove();
             $myOrder->setIsPaid(1);
             $this->entityManager->flush();
+            $mail = new Mail();
+            $mail->send();
         }
 
         //email pour success
