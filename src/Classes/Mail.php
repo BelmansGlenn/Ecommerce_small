@@ -11,7 +11,7 @@ class Mail
 
     private $secret_key = "3aca4dbb2dd8bbbdb1400865b3859b87";
 
-    public function send($to_email, $to_name, $subject, $title, $content, $button)
+    public function send($to_email, $to_name, $subject, $title, $content, $url, $button)
     {
         $mj = new Client($this->api_key, $this->secret_key,true,['version' => 'v3.1']);
         $body = [
@@ -33,13 +33,14 @@ class Mail
                     'Variables' => [
                         'title' => $title,
                         'content' => $content,
+                        'url' => $url,
                         'button' => $button
                     ]
                 ]
             ]
         ];
         $response = $mj->post(Resources::$Email, ['body' => $body]);
-        $response->success() && var_dump($response->getData());
+        $response->success();
     }
 
 }

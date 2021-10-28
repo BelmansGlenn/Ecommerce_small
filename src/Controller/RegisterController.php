@@ -46,24 +46,25 @@ class RegisterController extends AbstractController
             {
                 $password = $passwordHasher->hashPassword($user,$user->getPassword());
                 $user->setPassword($password);
+                $user->setConfirmationToken(str_replace('/', '', password_hash(uniqid('token_'), PASSWORD_BCRYPT)));
                 $this->entityManager->persist($user);
                 $this->entityManager->flush();
                 $mail = new Mail();
-                $content = 'Bonjour'.$user->getFirstname().',<br/>Nous sommes heureux de vous compter parmis nous.<br/>
-                    Pour commencer, merci de vérifier votre adresse email.<br/>';
+                $content = 'Bonjour '.$user->getFirstname().',<br/>Nous sommes heureux de vous compter parmis nous.<br/>
+                    Pour commencer, merci de vérifier votre adresse email.<br/><br/><br/>';
                 $mail->send($user->getEmail(),
                     $user->getFullname(),
                     'Bienvenue sur Glaira',
                     'Vérification du compte',
                     $content,
-                    'Vérifier' );
+                    'confirm/'.urlencode($user->getConfirmationToken()),
+                    'Vérifier'
+                );
                 $notification = "Un email vous a été envoyé pour vérifier votre compte.";
             }else{
                 $notification = "Cet email a déjà été utilisé.";
             }
 
-
-            return $this->redirectToRoute('app_login');
         }
 
         return $this->render('register/index.html.twig', [
