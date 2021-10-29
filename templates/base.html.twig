@@ -26,11 +26,10 @@
     </head>
     <body>
     <div id="goTop"><i class="fas fa-long-arrow-alt-up"></i></div>
-    <div class="cursor--point"></div>
+    {# <div class="cursor--point"></div>
     <div id="cursor">
         <div class="cursor--inner"></div>
-       
-    </div>  
+    </div>   #}
     <div class="boxHeadScroll">
         <header class="headerB">
             <a href="{{ path('home') }}"><div class="logoHead">Glaira</div></a>
@@ -38,7 +37,7 @@
             <section class="accHead">
                 {% if app.user %}
                     <a class="accName" href="{{ path('account') }}">{{ app.user.firstname }}</a>
-                {% else %}
+                {% else %} 
                     <a class="accName" href="{{ path('app_login') }}">Connexion</a>
                 {% endif %}
                     <figure>

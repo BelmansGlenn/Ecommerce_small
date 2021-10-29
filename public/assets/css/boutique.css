@@ -213,8 +213,20 @@
   align-items: center;
 }
 
+.zoomProduct button {
+  font-family: agenda, sans-serif;
+  font-size: 15px;
+  color: #707070;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  padding: 30px 60px 0px 60px;
+}
+
 .zoomProduct header {
-  margin-top: 40px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -270,7 +282,6 @@
   font-family: arponasans, sans-serif;
   text-transform: uppercase;
   font-size: 18px;
-  margin: 20px;
 }
 
 .zoomProduct div {
@@ -340,6 +351,11 @@
   }
   .zoomProduct section :nth-child(1) h3 {
     color: #707070;
+    margin: 20px;
+  }
+
+  .zoomProduct button {
+    padding: 30px 60px 0px 60px;
   }
 }
 @media (min-width: 800px) {

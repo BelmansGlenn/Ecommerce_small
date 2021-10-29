@@ -298,7 +298,7 @@ body {
 }
 @media (min-width:800px) {
     body, * {
-        cursor:none;
+        // cursor:none;
     }
     @media (hover: hover) and (pointer: fine) {
         #cursor {
