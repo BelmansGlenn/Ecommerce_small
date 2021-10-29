@@ -12,5 +12,11 @@
   margin: 40px 43px 0px 43px;
   text-align: center;
 }
+.notifsMsg span {
+  text-transform: uppercase;
+  color: #707070;
+  font-size: 12px;
+  font-weight: 800;
+}
 
 /*# sourceMappingURL=style.css.map */
