@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mot de passe oublié{% endblock %}
+
+{% block body %}
+    <form class="formCo" method="post">
+        {% if notification %}
+            <div class="alert alert-danger">{{ notification }}</div>
+        {% endif %}
+        <h1>Réinitialiser mon mot de passe</h1>
+        <label for="inputEmail">Votre e-mail</label>
+        <input class="inputFco" type="email" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="exemple@gmail.com" required autofocus>
+
+        <button type="submit">
+            <i class="fas fa-long-arrow-alt-right"></i>
+        </button>
+    </form>
+    <button class="insCo">
+        <a href="{{ path("app_login") }}">Se connecter</a>
+    </button>
+{% endblock %}

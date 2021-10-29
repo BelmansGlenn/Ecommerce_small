@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mot de passe oublié{% endblock %}
+
+{% block body %}
+    <section class="changeMdpForm">
+        <h1>Réinitialiser votre mot de passe</h1>
+        {{ form_start(changePasswordForm) }}
+        {{ form_end(changePasswordForm) }}
+    </section>
+    <button class="insCo">
+        <a href="{{ path("app_login") }}">Se connecter</a>
+    </button>
+{% endblock %}
