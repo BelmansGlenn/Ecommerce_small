@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Classes\Basket;
 use App\Classes\Mail;
 use App\Entity\Order;
+use App\Entity\OrderDetails;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -29,7 +30,7 @@ class AfterPaymentController extends AbstractController
     public function success($stripeSessionId, Basket $basket): Response
     {
         $myOrder = $this->entityManager->getRepository(Order::class)->findOneByStripeSessionId($stripeSessionId);
-
+        $orderDetail = $this->entityManager->getRepository(OrderDetails::class)->findOneByMyOrder($myOrder);
         if(!$myOrder || $myOrder->getUser() != $this->getUser()){
             return $this->redirectToRoute('home');
         }
@@ -39,10 +40,19 @@ class AfterPaymentController extends AbstractController
             $myOrder->setIsPaid(1);
             $this->entityManager->flush();
             $mail = new Mail();
-            $mail->send();
+            $mail->send(
+                $this->getUser()->getEmail(),
+                $this->getUser()->getFullName(),
+                'Confirmation de paiement',
+                'Merci pour votre commande',
+                'Merci d\'avoir choisi Glaira pour la décoration de votre maison.<br/><br/>
+                         Votre commande n°'.$myOrder->getReference().' est en cours de préparation.<br/><br/>
+                         <br/><br/>Si vous voulez suivre votre commande, veuillez cliquer sur ce lien.<br/><br/>',
+                'mon-compte/mes-commandes',
+                'Suivre mes commandes'
+            );
         }
 
-        //email pour success
 
         return $this->render('after_payment/success.html.twig', [
             'orderValidated' => $myOrder
@@ -59,8 +69,18 @@ class AfterPaymentController extends AbstractController
         if(!$myOrder || $myOrder->getUser() != $this->getUser()){
             return $this->redirectToRoute('home');
         }
-
-        //email pour failed
+        $mail = new Mail();
+        $mail->send(
+            $this->getUser()->getEmail(),
+            $this->getUser()->getFullName(),
+            'Erreur de paiement',
+            'Nous sommes désolé',
+            'Merci d\'avoir choisi Glaira, mais malheureusement il semble qu\'il y ait eu une erreur lors du paiement<br/><br/>
+                         Votre commande n°'.$myOrder->getReference().' n\'a pas pu etre confirmé.<br/><br/>
+                         <br/><br/>Si vous voulez réessayer le paiement, veuillez cliquer sur ce lien.<br/><br/>',
+            'commande',
+            'Réessayer le paiement'
+        );
 
         return $this->render('after_payment/failed.html.twig', [
             'failedOrder' => $myOrder

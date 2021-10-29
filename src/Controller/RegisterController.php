@@ -53,7 +53,7 @@ class RegisterController extends AbstractController
                 $content = 'Bonjour '.$user->getFirstname().',<br/>Nous sommes heureux de vous compter parmis nous.<br/>
                     Pour commencer, merci de vérifier votre adresse email.<br/><br/><br/>';
                 $mail->send($user->getEmail(),
-                    $user->getFullname(),
+                    $user->getFullName(),
                     'Bienvenue sur Glaira',
                     'Vérification du compte',
                     $content,
