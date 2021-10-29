@@ -1,0 +1,15 @@
+@use 'variables.scss';
+
+.rulesBox h1 {
+    font-family: kudryashev-d-contrast, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.rulesBox p {
+    font-family: agenda, sans-serif;
+    font-size: 14px;
+    margin: 20px 43px;
+    text-align: center;
+}

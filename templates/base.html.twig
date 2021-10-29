@@ -16,6 +16,7 @@
             <link rel="stylesheet" href="/assets/css/cmd-process.css">
             <link rel="stylesheet" href="/assets/css/cmd-final.css">
             <link rel="stylesheet" href="/assets/css/account-order.css">
+            <link rel="stylesheet" href="/assets/css/cgv.css">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
             <link rel="stylesheet" href="https://use.typekit.net/oel8paj.css">
         {% endblock %}
@@ -76,7 +77,6 @@
                 <a href="https://github.com/BelmansGlenn/Ecommerce_small"><i class="fab fa-twitter"></i></a>
                 <a href="https://github.com/BelmansGlenn/Ecommerce_small"><i class="fab fa-linkedin"></i></a>
             </div>
-            {# <nav> #}
             {% block boutique %}
             {% endblock %}
             <nav>
@@ -84,28 +84,29 @@
                     <h1>Espace client</h1>
                     <div>
                         <ul>
-                            <li><a href="{{ path('account') }}">Code promo<a></li>
-                            <li><a href="{{ path('account_address') }}">Retour et livraison<a></li>
-                            <li><a href="{{ path('home') }}">FAQ<a></li>                        </ul>
+                            <li><a href="{{ path('account') }}">Mon compte<a></li>
+                            <li><a href="{{ path("register") }}">Créer un compte<a></li>
+                            <li><a href="{{ path('products') }}">Glaira home<a></li>
+                        </ul>
                         <ul>
-                            <li><a href="{{ path('basket') }}">Favoris<a></li>
-                            <li><a href="{{ path('products') }}">Soldes<a></li>
-                            <li><a href="{{ path('home') }}">Abonnement<a></li>
+                            <li><a href="{{ path('account_address') }}">Adresses et livraison<a></li>
+                            <li><a href="{{ path('account_order') }}">Commandes<a></li>
+                            <li><a href="{{ path('app_logout') }}">Deconnexion<a></li>
                         </ul>
                     </div>
                 </section>
                 <section>
-                    <h1>Contact</h1>
+                    <h1>à propos</h1>
                     <div>
                         <ul>
-                            <li><a href="{{ path('home') }}">Contactez nous<a></li>
-                            <li><a href="{{ path('home') }}">Adresses<a></li>
-                            <li><a href="{{ path('products') }}">Job<a></li>
+                            <li><a href="mailto:glaira@store.be">Contactez nous<a></li>
+                            <li><a href="mailto:glaira@store.be">Retours et échanges<a></li>
+                            <li><a <a href="mailto:glaira@store.be">Jobs<a></li>
                         </ul>
                         <ul>
-                            <li><a href="{{ path('account') }}">Mon compte<a></li>
-                            <li><a href="{{ path('register') }}">Créer un compte<a></li>
-                            <li><a href="{{ path('account') }}">Cartes cadeau<a></li>
+                            <li><a href="{{ path('conditionsgenerale') }}">Conditions Générales<a></li>
+                            <li><a href="{{ path('conditionsgenerale') }}">Protection des données<a></li>
+                            <li><a href="{{ path('conditionsgenerale') }}">FAQ<a></li>
                         </ul>
                     </div>
                 </section>
