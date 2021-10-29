@@ -5,6 +5,9 @@
     <section class="compteMain">
         <h1>Mon compte</h1>
         <p>Bienvenue dans vote espace personnel <span>{{ app.user.firstname }}</span>, ici vous pourrez modifier les informations liées à votre compte.</p>
+        {% if is_granted('ROLE_ADMIN') %}
+        <button><a href="/admin">Aller dans le BackOffice</a></button>
+        {%  endif %}
         <button><a href="{{ path('account_password') }}">Modifier mon mot de passe</a></button>
         <button><a href="{{ path('account_address') }}">Gerer mes adresses</a></button>
         <button><a href="{{ path('account_order') }}">Mes commandes</a></button>

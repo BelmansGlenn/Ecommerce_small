@@ -65,9 +65,9 @@ class ResetPasswordController extends AbstractController
                     'Modifier votre mot de passe'
                 );
                 $notification = "Un email vous a été envoyé pour modifier votre mot de passe.";
+            }else {
+                $notification = "Cet email est inconnue.";
             }
-        }else {
-            $notification = "Cet email est inconnue.";
         }
 
         return $this->render('reset_password/index.html.twig',[
@@ -104,13 +104,13 @@ class ResetPasswordController extends AbstractController
         {
                 $new_password = $changePassword->get('new_password')->getData();
                 $passwordModify = $passwordHasher->hashPassword($password->getUser(), $new_password);
-
                 $password->getUser()->setPassword($passwordModify);
                 $this->entityManager->flush();
                 $notification = "Votre mot de passe a bien été mis à jour.";
                 return $this->redirectToRoute('app_login', [
                     'notification' => $notification
                 ]);
+
 
         }
 
