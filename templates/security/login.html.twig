@@ -16,13 +16,11 @@
     <label for="inputPassword">mot de passe</label>
     <input class="inputFco" type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="saisissez votre mot de passe" required>
     <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+    <a id="mdpOublie" href="{{ path("reset_password") }}">Mot de passe oublié ?</a>
     <button type="submit">
         <i class="fas fa-long-arrow-alt-right"></i>
     </button>
 </form>
-    <button class="insCo">
-        <a href="{{ path("reset_password") }}">Mot de passe oublié</a>?
-    </button>
 <button class="insCo">
     <a href="{{ path("register") }}">Créer un compte</a>
 </button>

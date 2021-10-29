@@ -5,9 +5,9 @@
 {% block body %}
     <form class="formCo" method="post">
         {% if notification %}
-            <div class="alert alert-danger">{{ notification }}</div>
+            <div class="notifsMsg">{{ notification }}</div>
         {% endif %}
-        <h1>Réinitialiser mon mot de passe</h1>
+        <h1 class="hackh1resetmdp">Réinitialiser mon mot de passe</h1>
         <label for="inputEmail">Votre e-mail</label>
         <input class="inputFco" type="email" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="exemple@gmail.com" required autofocus>
 

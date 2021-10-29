@@ -52,8 +52,36 @@
     margin: auto;
     display: block;   
 }
-
-// Inscription 
+#mdpOublie {
+    font-family: agenda, sans-serif;
+    color: #707070;
+    text-decoration: underline;
+    font-size: 13px;
+}
+#reset_password_submit {
+    color: #484747;
+    font-family: arponasans, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin: auto;
+    border: 1px dotted #000000;
+    padding: 5px 10px !important;
+    margin: 0px 0px 30px 0px;
+    width: auto !important;
+    height: auto !important;
+}
+.changeMdpForm form div ul li {
+    font-family: agenda, sans-serif;
+    color: variables.$red;
+    font-size: 14px;
+    list-style: none;
+    margin: 1% 19%;
+    padding-top: 20px;
+    text-align: center;
+}
+// Inscription
 .insForm {
    display: flex;
    flex-direction: column;
