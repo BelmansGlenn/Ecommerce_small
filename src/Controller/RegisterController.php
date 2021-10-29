@@ -46,7 +46,7 @@ class RegisterController extends AbstractController
             {
                 $password = $passwordHasher->hashPassword($user,$user->getPassword());
                 $user->setPassword($password);
-                $user->setConfirmationToken(str_replace('/', '', password_hash(uniqid('token_'), PASSWORD_BCRYPT)));
+                $user->setConfirmationToken(str_replace('/', '', password_hash(uniqid(), PASSWORD_BCRYPT)));
                 $this->entityManager->persist($user);
                 $this->entityManager->flush();
                 $mail = new Mail();

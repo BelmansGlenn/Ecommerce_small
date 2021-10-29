@@ -37,6 +37,9 @@ class SecurityController extends AbstractController
          }elseif ($request->get('notification') === 'Une erreur est intervenue lors de la vérification de votre compte')
          {
              $notification = 'Une erreur est intervenue lors de la vérification de votre compte';
+         }elseif ($request->get('notification') === "Votre mot de passe a bien été mis à jour.")
+         {
+             $notification = "Votre mot de passe a bien été mis à jour.";
          }else{
              $notification = null;
          }
