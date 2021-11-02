@@ -185,6 +185,9 @@ body {
   display: flex;
   justify-content: center;
 }
+.baseFooter nav section div li a {
+  text-align: center;
+}
 
 #styleCatalogue {
   display: flex;
@@ -304,6 +307,15 @@ body {
   100% {
     opacity: 0;
     display: none;
+  }
+}
+@keyframes popOn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: inline-grid;
   }
 }
 @media (min-width: 600px) {

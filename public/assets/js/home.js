@@ -70,3 +70,12 @@ function ecgCaroussel() {
   })
 }
 ecgCaroussel()
+
+
+
+
+// Splitting hover interaction 
+
+// Splitting();
+// const target = document.querySelector('#target');
+// const results = Splitting({ target: target, by: 'chars' });
