@@ -21,6 +21,7 @@ function checkScroll() {
 
 
 // Basket informations 
+/*
 const basketProducts = document.querySelector("#basketInfo")
 const numProducts = basketProducts.firstElementChild.innerHTML
 function checkBasket() {
@@ -28,12 +29,13 @@ function checkBasket() {
     basketProducts.style.display = "none"
   } 
 }
-checkBasket()
+checkBasket() */
 
 
 // MENU 
 menuBtn = document.querySelector(".menuOpen")
 menuOpen = document.querySelector(".menuOpened")
+
 
 function menuClick() {
   menuBtn.addEventListener('click', (el) =>{ 

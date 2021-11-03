@@ -1,2 +1,2 @@
-console.clear();
+/* console.clear(); */
 Splitting();

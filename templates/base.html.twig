@@ -28,7 +28,7 @@
         {% endblock %}
 
         {% block javascripts %}
-            <script> Splitting(); </script>
+            <!-- <script> Splitting(); </script> -->
         {% endblock %}
     </head>
     <body>
@@ -40,16 +40,18 @@
     <div class="boxHeadScroll">
         <header class="headerB">
             <a href="{{ path('home') }}"><div class="logoHead">Glaira</div></a>
-            <a class="menuOpen" href="#"><i class="icHead fas fa-bars"></i></a>
+            <a class="menuOpen"><i class="icHead fas fa-bars"></i></a>
             <section class="accHead">
                 {% if app.user %}
                     <a class="accName" href="{{ path('account') }}">{{ app.user.firstname }}</a>
                 {% else %} 
-                    <a class="accName" href="{{ path('app_login') }}">Connexion</a>
+                    <a class="accName" href="{{ path('app_l"ogin') }}">Connexion</a>
                 {% endif %}
                     <figure>
-                    <a href="{{ path('basket') }}"><i class="icHead fas fa-shopping-basket"></i></a>
-                {% if app.session.get('basket') is null %}
+            
+                {% if app.session.get('basket') is same as(0) || app.session.get('basket') is null %}
+                <a href="{{ path('basket') }}"><i class="icHead fas fa-shopping-basket"></i></a>
+
                     {% else %}
                     <div id="basketInfo">
                         <p>{{ app.session.get('basket')|reduce((carry, v) => carry + v) }}</p>
