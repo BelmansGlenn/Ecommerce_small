@@ -45,7 +45,7 @@
                 {% if app.user %}
                     <a class="accName" href="{{ path('account') }}">{{ app.user.firstname }}</a>
                 {% else %} 
-                    <a class="accName" href="{{ path('app_l"ogin') }}">Connexion</a>
+                    <a class="accName" href="{{ path('app_login') }}">Connexion</a>
                 {% endif %}
                     <figure>
                 {% set basketCount = app.session.get('basket') %}
