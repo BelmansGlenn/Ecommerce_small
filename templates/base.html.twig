@@ -48,13 +48,14 @@
                     <a class="accName" href="{{ path('app_l"ogin') }}">Connexion</a>
                 {% endif %}
                     <figure>
-            
-                {% if app.session.get('basket') is same as(0) || app.session.get('basket') is null %}
+                {% set basketCount = app.session.get('basket') %}
+                {% if basketCount is empty %}
                 <a href="{{ path('basket') }}"><i class="icHead fas fa-shopping-basket"></i></a>
 
                     {% else %}
+                        <a href="{{ path('basket') }}"><i class="icHead fas fa-shopping-basket"></i></a>
                     <div id="basketInfo">
-                        <p>{{ app.session.get('basket')|reduce((carry, v) => carry + v) }}</p>
+                        <p>{{ basketCount|reduce((carry, v) => carry + v) }}</p>
                     </div>
                 {% endif %}
                     </figure>
