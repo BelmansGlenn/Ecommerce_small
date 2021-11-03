@@ -45,7 +45,7 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
         $email = $request->request->get('email', '');
         $user = $this->entityManager->getRepository(User::class)->findOneByEmail($email);
 
-        if($user->getConfirmationToken() !== null)
+        if(!$user || $user->getConfirmationToken() !== null)
         {
             $request->getSession()->set(Security::LAST_USERNAME, $email);
             throw new UserNotFoundException();
